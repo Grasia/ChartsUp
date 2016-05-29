@@ -306,7 +306,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Global Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Global Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
 
                                             <div class="clearfix"></div>
@@ -325,7 +325,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-4 col-sm-4 col-xs-12" style="padding-left:0px; padding-right:0px;">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Porcent Notifications <small>Super, Active, Medium , Low</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Percentage of such notifications <small></small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -340,7 +340,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Special tools Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Special tools Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -355,7 +355,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Database Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Database Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -370,7 +370,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Development Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Development Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal5"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -385,7 +385,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Charts Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Charts Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -400,7 +400,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i> Colaborative Notifications <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Colaborative Notifications <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal7"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -415,7 +415,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-users"></i>Future Ideas <small>start editing wikis by users</small></h2>
+                                            <h2><i class="fa fa-calendar"></i> Future Ideas <small>yearly statistics</small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
