@@ -1011,8 +1011,8 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-12 col-sm-12 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-bars"></i> Total content pages <small>Total number of content pages in each wiki</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1038,11 +1038,11 @@ $db->query($queryUpadateComparaciones4);
 							
 							</div>
 							
-							<div style="padding-right: 0px; padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
+							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-users"></i> Register Users <small>Total number of register users per wiki</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1071,8 +1071,8 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-bars"></i> Total editions <small>Total number of editions per wiki</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1101,8 +1101,8 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-bars"></i> Average Editions <small>average editions per wiki</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1130,8 +1130,8 @@ $db->query($queryUpadateComparaciones4);
 							<div style="padding-right: 0px; padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-bars"></i> Uploaded Files<small>total number of uploaded files per wiki</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal5"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1168,8 +1168,8 @@ $db->query($queryUpadateComparaciones4);
 
 										<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Users <small>Active, Administrator, Burocrat and Rollback</small></h2>
-												
+												<h2><i class="fa fa-bars"></i> Users <small>Active, Administrator, Burocrat and Rollback Users</small></h2>
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1196,7 +1196,7 @@ $db->query($queryUpadateComparaciones4);
 										<div class="x_panel">
 											<div class="x_title">
 												<h2><i class="fa fa-clock-o"></i> Users Activity<small>in last 30 days</small></h2>
-												
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal7"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -1220,6 +1220,374 @@ $db->query($queryUpadateComparaciones4);
 										
 
                                     </div>
+                                    
+                                    
+                                    
+                                    
+                                     <!-- Info Modals-->
+
+                                <div id="myModal1" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal2" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal3" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal4" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal5" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal6" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal7" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="myModal8" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div id="myModal9" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                            </div>
+
+                                            <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div style="padding:25px;">
+                                                    <p style=" text-align:justify;     margin-top: 15%;">
+
+                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+
+                                                    <p style=" text-align:justify;">
+
+                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- End Info modals-->
 									
 									<div class="col-md-7 col-sm-7 col-xs-12" style="padding-right: 0px;">
 										
@@ -1227,7 +1595,7 @@ $db->query($queryUpadateComparaciones4);
 										<div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-bars"></i> Statistics <small>Special Users, Editions and Pages</small></h2>
-                                    
+                                      <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -1592,7 +1960,7 @@ $db->query($queryUpadateComparaciones4);
 										<div class="x_panel">
 											<div class="x_title">
 												<h2><i class="fa fa-list-ul"></i> Leaders Board <small>in each wiki selected</small></h2>
-												
+												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal9"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
 											<div class="x_content">
@@ -2108,8 +2476,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Total Pages',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Pages / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2119,6 +2487,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2180,8 +2551,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal5'), theme);
         myChart9.setOption({
                  title : {
-         text: 'Total Pages',
-        subtext: 'Compare Statistics'
+         text: 'Metric used',
+        subtext: 'Pages / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2191,6 +2562,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2251,8 +2625,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal6'), theme);
         myChart9.setOption({
                  title : {
-         text: 'Total Pages',
-        subtext: 'Compare Statistics'
+          text: 'Metric used',
+        subtext: 'Pages / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2262,6 +2636,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2323,8 +2700,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal7'), theme);
         myChartRegistrados.setOption({
                  title : {
-        text: 'Total Register Users',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Number of Register Users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2334,6 +2711,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2395,8 +2775,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal8'), theme);
         myChartRegistrados.setOption({
                  title : {
-       text: 'Total Register Users',
-        subtext: 'Compare Statistics'
+       text: 'Metric used',
+        subtext: 'Number of Register Users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2406,6 +2786,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2466,8 +2849,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal9'), theme);
         myChartRegistrados.setOption({
                  title : {
-        text: 'Total Register Users',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Number of Register Users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2477,6 +2860,9 @@ $db->query($queryUpadateComparaciones4);
     },
     toolbox: {
         show : true,
+         orient: 'vertical',
+        x: 'right',
+        y: 'center',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
@@ -2536,8 +2922,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones4'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Total Editions',
-        subtext: 'Compare Statistics'
+       text: 'Metric used',
+        subtext: 'Number of Total editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2612,8 +2998,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones3'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Total Editions',
-        subtext: 'Compare Statistics'
+      text: 'Metric used',
+        subtext: 'Number of Total editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2686,8 +3072,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones2'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Total Editions',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Number of Total editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2761,8 +3147,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Upload Files',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Total number of uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2837,8 +3223,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros3'), theme);
         myChart9.setOption({
                  title : {
-         text: 'Upload Files',
-        subtext: 'Compare Statistics'
+         text: 'Metric used',
+        subtext: 'Total number of uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2911,8 +3297,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros2'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Upload Files',
-        subtext: 'Compare Statistics'
+       text: 'Metric used',
+        subtext: 'Total number of uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -2987,8 +3373,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Average Editions',
-        subtext: 'Compare Statistics'
+        text: 'Metric used',
+        subtext: 'Average of editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -3065,8 +3451,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones3'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Average Editions',
-        subtext: 'Compare Statistics'
+       text: 'Metric used',
+        subtext: 'Average of editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
@@ -3139,8 +3525,8 @@ $db->query($queryUpadateComparaciones4);
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones2'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Average Editions',
-        subtext: 'Compare Statistics'
+       text: 'Metric used',
+        subtext: 'Average of editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
