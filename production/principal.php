@@ -187,21 +187,12 @@ $db = new mysqli('localhost', 'root', '');
 													</div>
                                                 </div>
                                                 <div class="col-xs-12 bottom text-center" style="    margin-top: 0px;">
-                                                    <div class="col-xs-12 col-sm-4 emphasis">
-                                                        <p class="ratings">
-                                                            
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star-o"></span></a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-8 emphasis">
+                                                   
+                                                    <div class="col-xs-12 col-sm-12 emphasis">
 													
-													<button type="button" class="btn btn-success btn-xs"  data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
+													<button style="width:40%;" type="button" class="btn btn-success"  data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
  
-                                                        <a href="galeria.php"><button type="button" class="btn btn-primary btn-xs"> <i class="fa fa-link"></i> Seeker Link </button></a>
+                                                        <a href="galeria.php"><button style="width:40%;" type="button" class="btn btn-primary"> <i class="fa fa-link"></i> Seeker </button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -219,20 +210,11 @@ $db = new mysqli('localhost', 'root', '');
 													</div>
                                                 </div>
                                                 <div class="col-xs-12 bottom text-center" style="    margin-top: 0px;">
-                                                    <div class="col-xs-12 col-sm-4 emphasis">
-                                                        <p class="ratings">
-                                                           
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-8 emphasis">
-                                                       <button type="button" class="btn btn-success btn-xs"  data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
+                                                   
+                                                    <div class="col-xs-12 col-sm-12 emphasis">
+                                                       <button style="width:40%;" type="button" class="btn btn-success"  data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
  
-                                                        <a href="comparadorWikis.php"><button type="button" class="btn btn-primary btn-xs"> <i class="fa fa-link"></i> Comparator Link </button></a>
+                                                        <a href="comparadorWikis.php"><button style="width:40%;" type="button" class="btn btn-primary"> <i class="fa fa-link"></i> Comparator </button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -249,20 +231,11 @@ $db = new mysqli('localhost', 'root', '');
 													</div>
                                                 </div>
                                                 <div class="col-xs-12 bottom text-center" style="    margin-top: 0px;">
-                                                    <div class="col-xs-12 col-sm-4 emphasis">
-                                                        <p class="ratings">
-                                                            
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star-o"></span></a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-8 emphasis">
-                                                      <button type="button" class="btn btn-success btn-xs"  data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
+                                                   
+                                                    <div class="col-xs-12 col-sm-12 emphasis">
+                                                      <button style="width:40%;" type="button" class="btn btn-success"  data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
  
-                                                        <button type="button" class="btn btn-primary btn-xs"> <i class="fa fa-link"></i> Wikis Panel Link </button>
+                                                        <button style="width:40%;" type="button" class="btn btn-primary"> <i class="fa fa-link"></i> Wikis Panel </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -282,20 +255,11 @@ $db = new mysqli('localhost', 'root', '');
 													</div>
                                                 </div>
                                                 <div class="col-xs-12 bottom text-center" style="    margin-top: 0px;">
-                                                    <div class="col-xs-12 col-sm-4 emphasis">
-                                                        <p class="ratings">
-                                                           
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star"></span></a>
-                                                            <a href="#"><span class="fa fa-star-o"></span></a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-8 emphasis">
-                                                       <button type="button" class="btn btn-success btn-xs"  data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
+                                                  
+                                                    <div class="col-xs-12 col-sm-12 emphasis">
+                                                       <button style="width:40%;" type="button" class="btn btn-success "  data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
  
-                                                        <a href="usuariosGlobales.php"><button type="button" class="btn btn-primary btn-xs"> <i class="fa fa-link"></i> Users Panel Link </button></a>
+                                                        <a href="usuariosGlobales.php"><button  style="width:40%;" type="button" class="btn btn-primary"> <i class="fa fa-link"></i> Users Panel </button></a>
                                                     </div>
                                                 </div>
                                             </div>
