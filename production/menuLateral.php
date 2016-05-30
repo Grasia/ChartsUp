@@ -20,20 +20,20 @@
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
             <div class="menu_section">
-                <h3 style="font-family: 'Montserrat Alternates', sans-serif;">General Wikia</h3>
+                <h3 style="font-family: 'Montserrat Alternates', sans-serif;">Wikia</h3>
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-home"></i> First Steps <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-                            <li><a href="index.html">Presentation</a>
+                            <li><a href="index.html">Enter</a>
                             </li>
-                            <li><a href="principal.php">Dashboard Pannel</a>
+                            <li><a href="principal.php">Welcome</a>
                             </li>
 
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-cubes"></i> Comparator <span class="fa fa-chevron-down"></span></a>
+                    <li><a href="comparadorWikis.php"><i class="fa fa-cubes"></i> Compare <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-                            <li><a href="comparadorWikis.php">Wikia Comparator</a>
+                           <li><a href="comparadorWikis.php">Wikia Comparator</a> 
                             </li>
 
 
@@ -63,7 +63,7 @@
                                     </ul>
                                 </li>
 								-->
-                    <li><a><i class="fa fa-table"></i> Searcher <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-table"></i> Search <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
                             <li><a href="galeria.php">Alphabetic Wiki Search</a>
                             </li>
@@ -89,7 +89,7 @@
 
                     <li><a><i class="fa fa-users"></i> Users Statistics <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-                            <li><a href="usuariosGlobales.php">Global User Wikia Statistics</a>
+                           <li><a href="usuariosGlobales.php">Global User Wikia Statistics</a>
                             </li>
 
 
@@ -102,11 +102,9 @@
             <div class="menu_section">
                 <h3 style="font-family: 'Montserrat Alternates', sans-serif;">ChartsUp</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-cogs"></i> About ChartsUp <span class="fa fa-chevron-down"></span></a>
+                    <li><a href="colstats.php"><i class="fa fa-cogs"></i> About us <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-
-
-                            <li><a href="colstats.php">Dashboard Section</a>
+                            <!--<li><a href="colstats.php">Dashboard Section</a> -->
                             </li>
 
 
@@ -122,17 +120,17 @@
 
         <!-- /menu footer buttons -->
         <div class="sidebar-footer hidden-small">
-            <a href="colstats.php" data-toggle="tooltip" data-placement="top" title="ChartsUp Panel">
+            <a href="colstats.php" data-toggle="tooltip" data-placement="top" title="Settings">
                 <span aria-hidden="true"><i class="fa fa-cog fa-lg"></i></span>
             </a>
-            <a data-toggle="tooltip" id="view-fullscreen" data-placement="top" title="FullScreen">
+            <a href="https://github.com/Grasia/ChartsUp" target="_blank" data-toggle="tooltip" data-placement="top" title="Github">
+                <span aria-hidden="true"><i class="fa fa-github fa-lg"></i></span>
+            </a>
+             <a data-toggle="tooltip" id="view-fullscreen" data-placement="top" title="FullScreen">
                 <span aria-hidden="true"><i class="fa fa-arrows-alt fa-lg"></i></span>
             </a>
             <a href="index.html" data-toggle="tooltip" data-placement="top" title="Close">
                 <span aria-hidden="true"><i class="fa fa-power-off fa-lg"></i></span>
-            </a>
-            <a href="https://github.com/Grasia/ChartsUp" target="_blank" data-toggle="tooltip" data-placement="top" title="Github repository">
-                <span aria-hidden="true"><i class="fa fa-github fa-lg"></i></span>
             </a>
         </div>
 
