@@ -8,7 +8,7 @@
 
 
         <div class="navbar nav_title" style="background-color:black; border: 0; font-family: 'Orbitron', sans-serif;">
-            <a href="principal.php" class="site_title"> <img style="    margin-left: 10px;" id="logo" src="../logoTFG.png"><span style=" color:white; padding:5px;   font-size: 30px;    vertical-align: middle;">Charts<span>Up</span></span>
+            <a href="principal.php" class="site_title"> <img style="    margin-left: 10px;" id="logo" src="images/logoTFG.png"><span style=" color:white; padding:5px;   font-size: 30px;    vertical-align: middle;">Charts<span>Up</span></span>
             </a>
         </div>
         <div class="clearfix"></div>

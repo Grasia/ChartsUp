@@ -3,13 +3,7 @@
 		
 
 		
-		  $db = new mysqli('localhost', 'root', '');
-		  $db->select_db('tfgdatabase');
-		  $db->query("SET CHARACTER SET UTF8");
-		  
-		  if( $db->connect_errno > 0 ){
-			die('Unable to connect to database [' . $db->connect_error . ']');
-		  }
+		 include 'dbConect.php';
 	   		  
 		$medida1;
 		$medida2;

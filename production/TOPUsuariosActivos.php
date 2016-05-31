@@ -3,10 +3,7 @@
 		
 
 		
-		  $db = new mysqli('localhost', 'root', '');
-		  $db->select_db('tfgdatabase');
-		  $db->query("SET CHARACTER SET UTF8");
-		    
+		 include 'dbConect.php';
 		 ?>
 
 <!DOCTYPE html>
