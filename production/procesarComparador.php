@@ -780,7 +780,7 @@ $db->query($queryUpadateComparaciones4);
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/icheck/flat/green.css" rel="stylesheet">
-
+<link rel="icon" href="images/logoTFG.png">
 	<style>
 	h1,h2,h3, #userName{
 	
