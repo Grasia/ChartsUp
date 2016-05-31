@@ -1,15 +1,6 @@
 <?php
 
-$db = new mysqli('localhost', 'root', '');
-  
-$db->query("SET CHARACTER SET UTF8");
-
-if( $db->connect_errno > 0 ){
-die('Unable to connect to database [' . $db->connect_error . ']');
-}
-
-
-$db->select_db('tfgdatabase');
+include 'dbConect.php';
 
 
 $contador=0;
@@ -777,7 +768,7 @@ $db->query($queryUpadateComparaciones4);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ChartsUp Comparator </title>
+    <title>ColStooy </title>
 
     <!-- Bootstrap core CSS -->
 
