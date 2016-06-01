@@ -1,6 +1,6 @@
 <?php
 
-include 'dbConect.php';
+ include 'dbConect.php';
 
 
 $contador=0;
@@ -768,7 +768,7 @@ $db->query($queryUpadateComparaciones4);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ChartsUp</title>
+    <title>ChartsUp comparator</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -780,7 +780,7 @@ $db->query($queryUpadateComparaciones4);
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/icheck/flat/green.css" rel="stylesheet">
-<link rel="icon" href="images/logoTFG.png">
+    <link rel="icon" href="images/logoTFG.png">
 	<style>
 	h1,h2,h3, #userName{
 	
@@ -802,6 +802,206 @@ $db->query($queryUpadateComparaciones4);
 
 
 <body class="nav-md">
+
+
+
+<style>
+            #loader-wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1000;
+            }
+            
+            #loader {
+                display: block;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                width: 150px;
+                height: 150px;
+                margin: -75px 0 0 -75px;
+                border: 3px solid #3498db;
+                z-index: 1500;
+            }
+            
+            #loader:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border: 3px solid #e74c3c;
+            }
+            
+            #loader:after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                border: 3px solid #f9c922;
+            }
+            /* change border to transparent and set only border-top to a solid color */
+            
+            #loader {
+                border: 3px solid transparent;
+                border-top-color: #3498db;
+            }
+            
+            #loader:before {
+                border: 3px solid transparent;
+                border-top-color: #e74c3c;
+            }
+            
+            #loader:after {
+                border: 3px solid transparent;
+                border-top-color: #f9c922;
+            }
+            
+            #loader {
+                border-radius: 50%;
+            }
+            
+            #loader:before {
+                border-radius: 50%;
+            }
+            
+            #loader:after {
+                border-radius: 50%;
+            }
+            /* copy and paste the animation inside all 3 elements */
+            /* #loader, #loader:before, #loader:after */
+            
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+            /* include this only once */
+            
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(0deg);
+                    /* IE 9 */
+                    transform: rotate(0deg);
+                    /* Firefox 16+, IE 10+, Opera */
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(360deg);
+                    /* IE 9 */
+                    transform: rotate(360deg);
+                    /* Firefox 16+, IE 10+, Opera */
+                }
+            }
+            
+            @keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(0deg);
+                    /* IE 9 */
+                    transform: rotate(0deg);
+                    /* Firefox 16+, IE 10+, Opera */
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    /* Chrome, Opera 15+, Safari 3.1+ */
+                    -ms-transform: rotate(360deg);
+                    /* IE 9 */
+                    transform: rotate(360deg);
+                    /* Firefox 16+, IE 10+, Opera */
+                }
+            }
+            
+            #loader {
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+            
+            #loader:before {
+                -webkit-animation: spin 3s linear infinite;
+                animation: spin 3s linear infinite;
+            }
+            
+            #loader-wrapper .loader-section {
+                position: fixed;
+                top: 0;
+                width: 51%;
+                height: 100%;
+                background: #222222;
+                z-index: 1000;
+            }
+            
+            #loader-wrapper .loader-section.section-left {
+                left: 0;
+            }
+            
+            #loader-wrapper .loader-section.section-right {
+                right: 0;
+            }
+            
+            #loader {
+                z-index: 1001;
+                /* anything higher than z-index: 1000 of .loader-section */
+            }
+            
+            h1 {
+                color: #EEEEEE;
+            }
+            
+            #content {
+                margin: 0 auto;
+                padding-bottom: 50px;
+                width: 80%;
+                max-width: 978px;
+            }
+            /* Loaded */
+            
+            .loaded #loader-wrapper .loader-section.section-left {
+                -webkit-transform: translateX(-100%);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(-100%);
+                /* IE 9 */
+                transform: translateX(-100%);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            
+            .loaded #loader-wrapper .loader-section.section-right {
+                -webkit-transform: translateX(100%);
+                /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(100%);
+                /* IE 9 */
+                transform: translateX(100%);
+                /* Firefox 16+, IE 10+, Opera */
+            }
+            
+            .loaded #loader {
+                opacity: 0;
+            }
+            
+            .loaded #loader-wrapper {
+                visibility: hidden;
+            }
+        </style>
+
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+
+
+        </div>
+
+        <script>
+            $(window).load(function () {
+                // Una vez se cargue al completo la página desaparecerá el div "cargando"
+                $('#loader-wrapper').hide();
+            });
+        </script>
 
     <div class="container body">
 
@@ -1224,27 +1424,39 @@ $db->query($queryUpadateComparaciones4);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/1graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
 
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
                                                 </div>
                                             </div>
 
@@ -1276,15 +1488,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/2graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1316,15 +1539,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/3graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1356,15 +1590,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/4graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1396,15 +1641,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/5graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1436,15 +1692,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/6graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1474,17 +1741,28 @@ $db->query($queryUpadateComparaciones4);
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
-                                                    <p style=" text-align:justify;     margin-top: 15%;">
+                                                   <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/8graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1514,17 +1792,28 @@ $db->query($queryUpadateComparaciones4);
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
-                                                    <p style=" text-align:justify;     margin-top: 15%;">
+                                                   <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/7graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
@@ -1556,15 +1845,26 @@ $db->query($queryUpadateComparaciones4);
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+
+
+<br><br>
+												</p>
 
                                                     <p style=" text-align:justify;">
 
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                       
+This like the rest , have a toolbar with different functions .
+<br><br>
+We can draw straight freely through the panel or modify data manually to see their behavior.
+<br><br>
+In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+<br><br>
+<img style="width:100%;" src="images/9graficPopup.png">
+<br><br>
+Of course we can reset the graph as initially envision .
+<br><br>
+We can also save the picture after all the changes we have made.</p>
                                                 </div>
                                             </div>
 
