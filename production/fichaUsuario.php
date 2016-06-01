@@ -3,7 +3,8 @@
 		  $nombreUsuario = $_GET['nombre'];
 
 		
-		   include 'dbConect.php';
+		include 'dbConect.php';
+
 		  
 		  $query = 'SELECT *
 					FROM aportaciones where aportaciones.nombre_usuario = "'.$nombreUsuario.'"';
@@ -32,7 +33,7 @@
 		  $num_resultsListado3 = $result3->num_rows;
 		  
 		  $queryLogros = 'SELECT *
-					FROM logros where logros.nombre_usuario = "'.$nombreUsuario.'"';
+					FROM logros where logros.nombre_usuario = "'.$nombreUsuario.'" order by logros.puntos DESC';
 		  
 							
 		  if( !$resultLogros = $db->query($queryLogros) ){
@@ -64,7 +65,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ficha Usuario</title>
+    <title>Colstats: User <?php echo $nombreUsuario?></title>
 
     <!-- Bootstrap core CSS -->
 
@@ -79,7 +80,7 @@
 
 
     <script src="js/jquery.min.js"></script>
-
+<link rel="icon" href="images/logoTFG.png">
 	<style>
 	h2,h3, #userName{
 	
@@ -234,13 +235,12 @@
                                             <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                                                 <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Activity</a>
                                                 </li>
-                                                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Last User Badges</a>
-                                                </li>
-                                                <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab3" data-toggle="tab" aria-expanded="false">Lead Achievements</a>
+                                                <!--<li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Last User Badges (Esto se borrara)</a>
+                                                </li>-->
+                                                <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab3" data-toggle="tab" aria-expanded="false">Last User Badges</a>
                                                 </li>
 												
-												<li role="presentation" class=""><a href="#tab_content4" role="tab" id="profile-tab4" data-toggle="tab" aria-expanded="false">Details</a>
-                                                </li>
+												
 												
                                             </ul>
                                             <div id="myTabContent" class="tab-content">
@@ -254,7 +254,7 @@
 														<div class="col-md-12 col-sm-12 col-xs-12">
 															<div class="x_panel">
 																<div class="x_title">
-																	<h2>Activity<small>details</small></h2>
+																	<!--<h2>Activity</h2>-->
 																	
 																	<div class="clearfix"></div>
 																</div>
@@ -263,7 +263,7 @@
 																	<table id="example" class="table table-striped responsive-utilities jambo_table">
 																		<thead>
 																			<tr class="headings">
-																				 <th>Wiki Aportación </th>
+																				 <th>Wiki Aportation</th>
 																				 <th>Gráfico</th>
 																				<th class=" no-link last"><span class="nobr">Número Ediciones</span>
 																				<th>Fecha de inicio</th>
@@ -415,16 +415,18 @@
 
 																		 echo'
 																																	
-																		<div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDown">
+																		<div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDown" >
 																			<div class="well profile_view">
-																				<div class="col-sm-12" style="    min-height: 140px;">
+																				<div class="col-sm-12" style="    min-height: 140px; height: 190px;">
 																					
 																					<div class="left col-xs-7">
 																						
 																						<h2>'.$rowLogros->titulo_logro.'</h2>
 																						<img style="    border-radius: 50%;" src="'.$rowLogros->url_avatar_usuario.'" class="avatar" alt="Avatar">
 																						<p><strong>Wiki: </strong><a href="fichaWiki.php?id='.$rowLogros->id_wiki.'"> '.$rowNombreWiki->nombre_wiki.' </a></p>
-																						
+																						<br>
+																						<p><strong>Description: </strong>'.$rowLogros->descripcion_logro.'.</p>
+																						</br>
 																					</div>
 																					<div class="right col-xs-5 text-center">
 																						<img src="'.$rowLogros->url_imagen_logro.'" alt="" class="img-circle img-responsive">
@@ -459,119 +461,7 @@
 												
 												</div>
 												
-												<div role="tabpanel" class="tab-pane fade" id="tab_content4" aria-labelledby="profile-tab">
-
-
-													<div class="row">
-													<div class="col-md-12">
-														<div class="x_panel">
-															<div class="x_title">
-																<h2>Projects</h2>
-																
-																<div class="clearfix"></div>
-															</div>
-															<div class="x_content">
-
-																<p>Simple table with project listing with progress and editing options</p>
-
-																<!-- start project list -->
-																<table class="table table-striped projects">
-																	<thead>
-																		<tr>
-																			<th style="width: 1%">Count</th>
-																			<th style="width: 20%">Project Name</th>
-																			<th>Team Members</th>
-																			<th>Project Progress</th>
-																			<th>Status</th>
-																			<th style="width: 20%">#Edit</th>
-																		</tr>
-																	</thead>
-																	<tbody>
-																		<?php
-																		
-																		
-																		
-																		   if( !$result4 = $db->query($query) ){
-																			die('There was an error running the query [' . $db->error . ']');
-																		  }
-
-																		  $num_resultsListado4 = $result4->num_rows;
-																		
-																		 for( $i = 1; $i <= $num_resultsListado4; $i++ ){
-				
-																	
-																				$row4 = $result4->fetch_object();
-																				
-																				$queryWiki = 'SELECT * FROM wikis where wikis.id_wiki = "'.$row4->id_wiki.'"';
-		  
-																				 if( !$resultWiki = $db->query($queryWiki) ){
-																					die('There was an error running the query [' . $db->error . ']');
-																				  }
-
-																				  $rowWiki = $resultWiki->fetch_object();
-																																				
-																		echo'
-																		<tr>
-																			<td>'.$i.'</td>
-																			<td>
-																				<a>'.$rowWiki->nombre_wiki.'</a>
-																				<br />
-																				<small>Created 01.01.2015</small>
-																			</td>
-																			<td>
-																				<ul class="list-inline">
-																					<li>
-																						<img src="http://localhost/personal/njoroge/assets3/img.jpg" class="avatar" alt="Avatar">
-																					</li>
-																					<li>
-																						<img src="http://localhost/personal/njoroge/assets3/img.jpg" class="avatar" alt="Avatar">
-																					</li>
-																					<li>
-																						<img src="http://localhost/personal/njoroge/assets3/img.jpg" class="avatar" alt="Avatar">
-																					</li>
-																					<li>
-																						<img src="http://localhost/personal/njoroge/assets3/img.jpg" class="avatar" alt="Avatar">
-																					</li>
-																				</ul>
-																			</td>
-																			<td class="project_progress">
-																				<div class="progress progress_sm">
-																					<div class="progress-bar bg-green" role="progressbar" data-transitiongoal="'.$row4->ediciones.'"></div>
-																				</div>
-																				<small>'.$row4->ediciones.' Ediciones</small>
-																			</td>
-																			<td>
-																				<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-																			</td>
-																			<td>
-																				<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-																				<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-																				<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-																			</td>
-																		</tr>';
-																		
-																		}
-																		
-																		?>
-																		
-																	</tbody>
-																</table>
-																<!-- end project list -->
-
-															</div>
-														</div>
-													</div>
-												</div>
-               
-                   
-						
-				
-
-                <!-- /footer content -->
-                    
-                									
 												
-												</div>
                                             </div>
                                         </div>
                                     </div>
@@ -689,17 +579,17 @@
         var myChart9 = echarts.init(document.getElementById('mainb'), theme);
         myChart9.setOption({
             title : {
-        text: 'User info',
+       // text: 'User info',
         subtext: 'Wikia'
     },
     tooltip : {
         trigger: 'axis'
     },
-    legend: {
+   /* legend: {
 		x: 'center',
         y: 'bottom',
-        data:['Editions']		
-    },
+         data: ['Line', 'Bar', 'Scatter', 'K', 'Pie', 'Radar', 'Chord', 'Force', 'Map', 'Gauge', 'Funnel']	
+    },*/
     toolbox: {
         show : true,
         feature : {
@@ -714,12 +604,13 @@
     xAxis : [
         {
             type : 'category',
+			show: false,
             data : [
 			
 			<?php
 			
 			 $query = 'SELECT *
-					FROM aportaciones where aportaciones.nombre_usuario = "'.$nombreUsuario.'" ORDER BY aportaciones.ediciones DESC ';
+					FROM aportaciones where aportaciones.nombre_usuario = "'.$nombreUsuario.'" ORDER BY aportaciones.ediciones DESC LIMIT 12';
 					
 					 if( !$result1 = $db->query($query) ){
 			die('There was an error running the query [' . $db->error . ']');
@@ -764,6 +655,24 @@
 		{
             name:'Editions',
             type:'bar',
+			 itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
+                    }
+                }
+            },
             data:[
 			<?php
 			
@@ -788,18 +697,51 @@
 			?>
 			
 			],
-            //markPoint : {
-             //   data : [
-             //       {type : 'max', name: 'Max'},
-            //        {type : 'min', name: 'Min'}
-            //    ]
-           // },
+			markPoint: {
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    formatter: function(params){
+                        return '<img src="' 
+                                + params.data.symbol.replace('image://', '')
+                                + '"/>';
+                    }
+				},
+				 data: [
+				 <?php
 			
-          //  markLine : {
-            //    data : [
-           //         {type : 'average', name: 'Media' }
-            //    ]
-          //  }
+			 $query = 'SELECT *
+					FROM aportaciones where aportaciones.nombre_usuario = "'.$nombreUsuario.'" ORDER BY aportaciones.ediciones DESC ';
+					
+					 if( !$result1 = $db->query($query) ){
+			die('There was an error running the query [' . $db->error . ']');
+		  }
+
+		  $num_resultsListado1 = $result1->num_rows;
+			
+			 for( $i = 1; $i <= $num_resultsListado1; $i++ ){
+				 
+				  $ii = $i -1;
+				  $row1 = $result1->fetch_object();
+			
+				  $queryWiki = 'SELECT * FROM wikis where wikis.id_wiki = "'.$row1->id_wiki.'" LIMIT 1';
+				  
+				  if( !$resultWiki = $db->query($queryWiki) ){
+					die('There was an error running the query [' . $db->error . ']');
+				  }
+
+				  $rowWiki = $resultWiki->fetch_object();
+			
+				//echo'{xAxis:'.$ii.', y: 320, name:"'.$rowWiki->nombre_wiki.'", symbolSize:30, symbol: "'.$rowWiki->url_imagen_wiki.'"},';
+				//'/*'.$rowWiki->url_imagen_wiki.'*/'
+
+			 }
+			?>
+				 
+		
+                ]
+			}
+			
         }
 		
 	
@@ -940,7 +882,7 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
 				
 			 }
 			 
-			 $query4 =  'SELECT SUM(ediciones) as `asd` from `aportaciones` where aportaciones.nombre_usuario = "'.$nombreUsuario.'"';
+			 $query4 =  'SELECT SUM(ediciones) as `asd` from `aportaciones` where aportaciones.nombre_usuario = "'.$nombreUsuario.'" ';
 							
 						if( !$result4 = $db->query($query4) ){
 						die('There was an error running the query [' . $db->error . ']');
@@ -1058,10 +1000,10 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
         trigger: 'axis'
     },
     legend: {
-        orient : 'vertical',
-        x : 'right',
-        y : 'bottom',
-        data:['<?php echo''.$row->nombre_usuario.''; ?>']
+      //  orient : 'vertical',
+      //  x : 'right',
+      //  y : 'bottom',
+        data:['<?php echo''.$row->nombre_usuario.''; ?> participations']
     },
     toolbox: {
         show : true,
@@ -1075,7 +1017,9 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
 	    xAxis : [
         {
             type : 'category',
-            data : ['2016','2015','2014','2013','2012','2011','2010','2009','2008','2007']
+			boundaryGap : false,
+            data : ['2007','2008','2009','2010','2011','2012','2013','2014','2015','2016']
+			//['2016','2015','2014','2013','2012','2011','2010','2009','2008','2007']
         }
     ],
     yAxis : [
@@ -1087,10 +1031,11 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
     calculable : true,
     series : [
         {
-            name: '<?php echo''.$row->nombre_usuario.''; ?>',
-            type: 'bar',
-            data : [<?php echo''.$contador2016.''; ?>, <?php echo''.$contador2015.''; ?>, <?php echo''.$contador2014.''; ?>, <?php echo''.$contador2013.''; ?>, <?php echo''.$contador2012.''; ?>, <?php echo''.$contador2011.''; ?>, <?php echo''.$contador2010.''; ?>,<?php echo''.$contador2009.''; ?>, <?php echo''.$contador2008.''; ?>, <?php echo''.$contador2007.''; ?>],
-               
+            name: '<?php echo''.$row->nombre_usuario.'';?> participations',
+            type: 'line',
+			 itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data : [<?php echo''.$contador2007.'';?>, <?php echo''.$contador2008.'';?>, <?php echo''.$contador2009.'';?>, <?php echo''.$contador2010.'';?>, <?php echo''.$contador2011.'';?>, <?php echo''.$contador2012.'';?>,<?php echo''.$contador2013.'';?>, <?php echo''.$contador2014.'';?>, <?php echo''.$contador2015.'';?>,<?php echo''.$contador2016.'';?>],
+               //<?php echo''.$contador2016.''; ?>, <?php echo''.$contador2015.''; ?>, <?php echo''.$contador2014.''; ?>, <?php echo''.$contador2013.''; ?>, <?php echo''.$contador2012.''; ?>, <?php echo''.$contador2011.''; ?>, <?php echo''.$contador2010.''; ?>,<?php echo''.$contador2009.''; ?>, <?php echo''.$contador2008.''; ?>, <?php echo''.$contador2007.''; ?>],
          }
                  
             ]

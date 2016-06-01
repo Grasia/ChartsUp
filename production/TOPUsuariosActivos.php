@@ -4,6 +4,8 @@
 
 		
 		 include 'dbConect.php';
+
+		    
 		 ?>
 
 <!DOCTYPE html>
@@ -16,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>ChartsUp - Top Active Users </title> 
 
     <!-- Bootstrap core CSS -->
 
@@ -30,6 +32,7 @@
     <link href="css/icheck/flat/green.css" rel="stylesheet">
 
 
+<link rel="icon" href="images/logoTFG.png">
     <script src="js/jquery.min.js"></script>
 
     <!--[if lt IE 9]>
@@ -41,7 +44,18 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+	<style>
+	h2,h3{
+	
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	
+	.DTTT_button{
+		
+		display:none;
+		
+	}
+	</style>
 </head>
 
 
@@ -55,7 +69,7 @@
                                              <?php
 				include'menuLateral.php';
 			?>
-            </div>
+         
 
             <!-- top navigation -->
             <div class="top_nav">
@@ -78,7 +92,7 @@
 					
 					<!-- Aqui esta la primera linea -->
 					<div class="col-md-3 col-sm-12 col-xs-12">
-                                        <div>
+                                        
 								<div class="x_panel">
 
                                             <div class="x_title">
@@ -121,7 +135,7 @@
                                             </ul>
 											
                                         </div>
-										</div>
+										
                         </div>
 						
 						   <div class="col-md-9 col-sm-9 col-xs-12">
@@ -231,13 +245,36 @@
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             calculable: true,
-            /*legend: {
-                //orient: 'vertical',
-                //x: 'left',
-                x: 'center',
-                y: 'bottom',
-                data: ['Wiki 1', 'Otras Wikis', 'Wiki 2', 'Wiki 3', 'Wiki 4', 'Otras Wikis 1', 'Wiki 5', 'Wiki 6', 'Wiki 7', 'Wiki 8']
-            },*/
+		legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:[
+		<?php
+			
+						 $query333 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_activos DESC LIMIT 10';
+							
+						if( !$result333 = $db->query($query333) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+
+					  $num_resultsListado333 = $result333->num_rows;
+						$restarTotal =0;
+						 for( $i333 = 1; $i333 <= $num_resultsListado333; $i333++ ){
+							 $row333 = $result333->fetch_object();
+							 
+						if(strpos($row333->nombre_wiki, "'") == true ){
+							$row333->nombre_wiki = str_replace(array('<', '>', "'", '&', '{', '}', '*'), array(' '), $row333->nombre_wiki);
+						}							
+								 echo "'$row333->nombre_wiki',";
+	
+						 }
+						 echo "'Other Wikis'";
+						 
+		
+		?>
+		
+		]
+    },
             toolbox: {
                 show: true,
                 feature: {
@@ -254,10 +291,10 @@
                         }
                     },*/
                     restore: {
-                        show: true
+                        show: false
                     },
                     saveAsImage: {
-                        show: true
+                        show: false
                     }
                 }
             },
@@ -300,6 +337,10 @@
 						 for( $i3 = 1; $i3 <= $num_resultsListado3; $i3++ ){
 						 
 						 $row3 = $result3->fetch_object();
+						 if(strpos($row3->nombre_wiki, "'") == true ){
+							$row3->nombre_wiki = str_replace(array('<', '>', "'", '&', '{', '}', '*'), array(' '), $row3->nombre_wiki);
+						}				
+						 
 							$restarTotal = $restarTotal + $row3->usuarios_activos;
 							 echo '{
 								 value: '.$row3->usuarios_activos.',
@@ -316,7 +357,7 @@
 						 $numeroExacto = $row4->asd - $restarTotal;
 						echo' {
 							 value: '.$numeroExacto.',
-							 name: "Otras Wikis"
+							 name: "Other Wikis"
 						 },';
 						 
 							 ?>
@@ -371,6 +412,10 @@
 			
 			 for( $i23 = 1; $i23 <= $num_resultsListado23; $i23++ ){
 					$row23 = $result23->fetch_object();
+					if(strpos($row23->nombre_wiki, "'") == true ){
+							$row23->nombre_wiki = str_replace(array('<', '>', "'", '&', '{', '}', '*'), array(' '), $row23->nombre_wiki);
+						}				
+					
 					echo "'$row23->nombre_wiki' "; //Solucionar esto.
 					if($i23 != $num_resultsListado23)
 						echo ',';

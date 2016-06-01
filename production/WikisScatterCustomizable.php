@@ -3,7 +3,12 @@
 		
 
 		
-		 include 'dbConect.php';
+		  include 'dbConect.php';
+
+		  
+		  if( $db->connect_errno > 0 ){
+			die('Unable to connect to database [' . $db->connect_error . ']');
+		  }
 	   		  
 		$medida1;
 		$medida2;
@@ -174,12 +179,13 @@ $ejeX = $_POST["ejeX"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>ChartsUp - Scatter Graph </title>
 
     <!-- Bootstrap core CSS -->
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="icon" href="images/logoTFG.png">
     <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
 
@@ -213,7 +219,7 @@ $ejeX = $_POST["ejeX"];
                                                 <?php
 				include'menuLateral.php';
 			?>
-            </div>
+            
 
             <!-- top navigation -->
             <div class="top_nav">
@@ -222,7 +228,7 @@ $ejeX = $_POST["ejeX"];
 				include'barraSuperior.php';
 			?>
             <!-- /top navigation -->
-
+</div>
             <!-- page content -->
             <div class="right_col" role="main">
 
@@ -233,7 +239,7 @@ $ejeX = $_POST["ejeX"];
                     <div class="row">
 					<div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Customizable</h2>
+                                    <h2>Customizable Scatter</h2>
                                     
                                     <div class="clearfix"></div>
                                 </div>

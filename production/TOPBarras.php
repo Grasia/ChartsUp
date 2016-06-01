@@ -3,7 +3,7 @@
 		
 
 		
-		  include 'dbConect.php';
+		include 'dbConect.php';
 
 		    
 		 ?>
@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ChartsUp - Top Average Editions </title>
+    <title>Gentallela Alela! | </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -31,7 +31,6 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/icheck/flat/green.css" rel="stylesheet">
 
-<link rel="icon" href="images/logoTFG.png">
 
     <script src="js/jquery.min.js"></script>
 
@@ -44,18 +43,7 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-	<style>
-	h2,h3{
-	
-		font-family: 'Montserrat Alternates', sans-serif;
-	}
-	
-	.DTTT_button{
-		
-		display:none;
-		
-	}
-	</style>
+
 </head>
 
 
@@ -66,10 +54,10 @@
 
         <div class="main_container">
 
-                                            <?php
+                                 <?php
 				include'menuLateral.php';
 			?>
-           
+            </div>
 
             <!-- top navigation -->
             <div class="top_nav">
@@ -81,12 +69,12 @@
             </div>
             <!-- /top navigation -->
 
+            <!-- top navigation -->
+            
+
             <!-- page content -->
             <div class="right_col" role="main">
 
-                <div class="">
-
-                    <div class="clearfix"></div>
 
                     <div class="row">
 					
@@ -96,7 +84,7 @@
 								<div class="x_panel">
 
                                             <div class="x_title">
-                                                <h2>Top 5 Wikis users more average edits</h2>
+                                                <h2>Top 5 Wikis users more users administrators</h2>
 
                                                 <div class="clearfix"></div>
                                             </div>
@@ -105,7 +93,7 @@
 
 											<?php
 													//EJEMPLO PARA TOP5 WIKIS CON + FICHEROS SUBIDOS
-													 $query2 = 'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 5';
+													 $query2 = 'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 5';
 						
 													  if( !$result2 = $db->query($query2) ){
 														die('There was an error running the query [' . $db->error . ']');
@@ -116,14 +104,11 @@
 													  
 													 for( $ii = 1; $ii <= $num_results2; $ii++ ){
 														 $row2 = $result2->fetch_object();
-												if($row2->url_imagen_wiki == ""){
-														$row2->url_imagen_wiki = "images/LargeWikiaLogo.png";
-														}
 													  echo '<li class="media event">
                                                     <a href="fichaWiki.php?id='.$row2->id_wiki.'"><img style="height: 50px;width: 50px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$row2->url_imagen_wiki.'" class="avatar" alt="Avatar"></a>
                                                     <div class="media-body">
                                                         <a class="title" href="fichaWiki.php?id='.$row2->id_wiki.'">'.$row2->nombre_wiki.' </a>  
-                                                        <p><strong>'.$row2->media_ediciones.'</strong> ediciones de media</p>
+                                                        <p><strong>'.$row2->usuarios_administradores.'</strong> usuarios administradores</p>
                                                         <p> <small>Contiene '.$row2->usuarios_registrados.' usuarios registrados</small>
                                                         </p>
                                                     </div>
@@ -141,7 +126,7 @@
 										</div>
                         </div>
 						
-
+						   
 					
 					<!-- Aquí está la segunda línea-->
 					
@@ -156,7 +141,7 @@
 						<div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Graphic average editions on Wikia</h2>
+                                    <h2>Graphic administrators users on Wikia</h2>
                                     <!--<ul class="nav navbar-right panel_toolbox">
                                         <li><a href="#"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -182,11 +167,11 @@
                             </div>
                         </div>			
 							
-
+							
 						<div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>The 10 Wikis with most average editions</h2>
+                                    <h2>The 10 Wikis with most administrations users</h2>
                                     <ul class="nav navbar-right panel_toolbox">
 
                                     </ul>
@@ -199,7 +184,6 @@
                                 </div>
                             </div>
                         </div>
-
 						
 						
 						
@@ -251,34 +235,7 @@
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             calculable: true,
-		legend: {
-        orient : 'vertical',
-        x : 'left',
-        data:[
-		<?php
-			
-						 $query333 =  'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 10';
-							
-						if( !$result333 = $db->query($query333) ){
-						die('There was an error running the query [' . $db->error . ']');
-					  }
 
-					  $num_resultsListado333 = $result333->num_rows;
-						$restarTotal =0;
-						 for( $i333 = 1; $i333 <= $num_resultsListado333; $i333++ ){
-							 $row333 = $result333->fetch_object();
-							 
-							
-								 echo "'$row333->nombre_wiki',";
-	
-						 }
-						 echo "'Other Wikis'";
-						 
-		
-		?>
-		
-		]
-    },
             toolbox: {
                 show: true,
                 feature: {
@@ -302,6 +259,34 @@
                     }
                 }
             },
+		legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:[
+		<?php
+			
+						 $query333 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
+							
+						if( !$result333 = $db->query($query333) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+
+					  $num_resultsListado333 = $result333->num_rows;
+						$restarTotal =0;
+						 for( $i333 = 1; $i333 <= $num_resultsListado333; $i333++ ){
+							 $row333 = $result333->fetch_object();
+							 
+							
+								 echo "'$row333->nombre_wiki',";
+	
+						 }
+						 echo "'Other Wikis'";
+						 
+		
+		?>
+		
+		]
+    },
             series: [
                 {
                     name: 'Wiki',
@@ -321,7 +306,7 @@
                                 show: true,
                                 position: 'center',
                                 textStyle: {
-                                    fontSize: '14',
+                                    fontSize: '20',
                                     fontWeight: 'normal'
                                 }
                             }
@@ -330,7 +315,7 @@
                     data: [
 		<?php
 			
-						 $query3 =  'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 10';
+						 $query3 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
 							
 						if( !$result3 = $db->query($query3) ){
 						die('There was an error running the query [' . $db->error . ']');
@@ -341,13 +326,13 @@
 						 for( $i3 = 1; $i3 <= $num_resultsListado3; $i3++ ){
 						 
 						 $row3 = $result3->fetch_object();
-							$restarTotal = $restarTotal + $row3->media_ediciones;
+							$restarTotal = $restarTotal + $row3->usuarios_administradores;
 							 echo '{
-								 value: '.$row3->media_ediciones.',
+								 value: '.$row3->usuarios_administradores.',
 								 name: "'.$row3->nombre_wiki.'"
 							 },';
 						 }
-						$query4 =  'SELECT SUM(media_ediciones) as `asd` from `wikis`';
+						$query4 =  'SELECT SUM(usuarios_administradores) as `asd` from `wikis`';
 							
 						if( !$result4 = $db->query($query4) ){
 						die('There was an error running the query [' . $db->error . ']');
@@ -373,6 +358,7 @@
 		
         var myChart9 = echarts.init(document.getElementById('mainb'), theme);
         myChart9.setOption({
+			
     title: {
         x: 'center',
         //text: 'ECharts例子个数统计',
@@ -403,7 +389,7 @@
 			data : [
 			<?php
 			
-			 $query23 =  'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 10';
+			 $query23 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
 
 					 if( !$result23 = $db->query($query23) ){
 			die('There was an error running the query [' . $db->error . ']');
@@ -413,7 +399,7 @@
 			
 			 for( $i23 = 1; $i23 <= $num_resultsListado23; $i23++ ){
 					$row23 = $result23->fetch_object();
-					echo "'$row23->nombre_wiki' ";
+					echo "'$row23->nombre_wiki' "; //Solucionar esto.
 					if($i23 != $num_resultsListado23)
 						echo ',';
 				}
@@ -453,7 +439,7 @@
 			data: [
 			<?php
 			
-			 $query23 =  'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 10';
+			 $query23 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
 
 					 if( !$result23 = $db->query($query23) ){
 			die('There was an error running the query [' . $db->error . ']');
@@ -463,7 +449,7 @@
 			
 			 for( $i23 = 1; $i23 <= $num_resultsListado23; $i23++ ){
 					$row23 = $result23->fetch_object();
-					echo "$row23->media_ediciones";
+					echo "$row23->usuarios_administradores";
 					if($i23 != $num_resultsListado23)
 						echo ',';
 				}
@@ -486,7 +472,7 @@
 				
 								<?php
 			
-			 $query232 =  'SELECT * FROM wikis ORDER BY wikis.media_ediciones DESC LIMIT 10';
+			 $query232 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
 
 					 if( !$result232 = $db->query($query232) ){
 			die('There was an error running the query [' . $db->error . ']');
@@ -496,9 +482,6 @@
 			
 			 for( $i232 = 1; $i232 <= $num_resultsListado232; $i232++ ){
 					$row232 = $result232->fetch_object();
-					if($row232->url_imagen_wiki == ""){
-						$row232->url_imagen_wiki = "images/LargeWikiaLogo.png";
-					}
 					$numero=$i232-1;
 					echo "{xAxis:".$numero.", y: 320, name:'Icono', symbolSize:30, symbol:'".$row232->url_imagen_wiki."'},";
 					

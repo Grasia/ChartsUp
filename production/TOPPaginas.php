@@ -3,7 +3,8 @@
 		
 
 		
-		  include 'dbConect.php';
+		 include 'dbConect.php';
+
 		    
 		 ?>
 
@@ -17,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>ChartsUp - Top Pages </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -30,6 +31,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/icheck/flat/green.css" rel="stylesheet">
 
+<link rel="icon" href="images/logoTFG.png">
 
     <script src="js/jquery.min.js"></script>
 
@@ -42,7 +44,18 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+	<style>
+	h2,h3{
+	
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	
+	.DTTT_button{
+		
+		display:none;
+		
+	}
+	</style>
 </head>
 
 
@@ -56,7 +69,7 @@
                                  <?php
 				include'menuLateral.php';
 			?>
-            </div>
+        
 
             <!-- top navigation -->
             <div class="top_nav">
@@ -126,22 +139,7 @@
 										</div>
                         </div>
 						
-						   <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>The 10 Wikis with most pages</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-
-                                    <div id="mainb" style="height:350px;"></div>
-
-                                </div>
-                            </div>
-                        </div>
 					
 					<!-- Aquí está la segunda línea-->
 					
@@ -153,7 +151,7 @@
 						
 
 				
-						<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
                                     <h2>Graphic pages on Wikia</h2>
@@ -182,7 +180,22 @@
                             </div>
                         </div>			
 							
-							
+						<div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>The 10 Wikis with most pages</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div id="mainb" style="height:350px;"></div>
+
+                                </div>
+                            </div>
+                        </div>				
 
 						
 						

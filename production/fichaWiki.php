@@ -3,7 +3,8 @@
 		$idwiki = $_GET['id'];
 
 		
-		  include 'dbConect.php';
+		include 'dbConect.php';
+
 		  
 		  $query = 'SELECT * FROM wikis where wikis.id_wiki = "'.$idwiki.'"';
 					
@@ -162,7 +163,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ficha Wiki </title>
+    <title>Colstats: Wiki <?php echo ''.$row->nombre_wiki.''?></title>
 
     <!-- Bootstrap core CSS -->
 	<link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
@@ -175,7 +176,7 @@
     <!-- Custom styling plus plugins -->
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/icheck/flat/green.css" rel="stylesheet">
-
+    <link rel="icon" href="images/logoTFG.png">
 
 	<style>
 	h2,h3{
@@ -269,7 +270,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->media_ediciones ?></div>
 
 												<h3>Average Edit.</h3>
-												<p>Global recently editions.</p>
+												<p>Average editions.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -279,7 +280,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->paginas ?></div>
 
 												<h3>Pages</h3>
-												<p>Global recently editions.</p>
+												<p>Global recently pages.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -289,7 +290,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->paginas_contenido ?></div>
 
 												<h3>Content Pages</h3>
-												<p>Global recently editions.</p>
+												<p>Global recently content pages.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -299,7 +300,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->usuarios_activos ?></div>
 
 												<h3>Act. Users</h3>
-												<p>Global recently editions.</p>
+												<p>Number of active users.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -309,7 +310,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->usuarios_administradores ?></div>
 
 												<h3>Adm. Users</h3>
-												<p>Global recently editions.</p>
+												<p>Number of administrative users.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -319,7 +320,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->usuarios_burocratas ?></div>
 
 												<h3>Buroc. Users</h3>
-												<p>Total Table Leader points earned.</p>
+												<p>Number of bureaucrats users.</p>
 											</div>
 										</div>
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -329,7 +330,7 @@
 												<div style="font-size:25px; font-family: 'Orbitron', sans-serif;" class="count"><?php echo $row->usuarios_reversores ?></div>
 
 												<h3>Rollb. Users</h3>
-												<p>Total wikis participating now.</p>
+												<p>Number of rollbacks users.</p>
 											</div>
 										</div>
 									</div>
@@ -342,7 +343,7 @@
 							 
 									<div class="x_panel">
                                             <div class="x_title">
-                                                <h2><i class="fa fa-users"></i> Users <small>last common users</small></h2>
+                                                <h2><i class="fa fa-users"></i> Users <small>last common users order by editions</small></h2>
                                                 
                                                 <div class="clearfix"></div>
                                             </div>
@@ -350,7 +351,7 @@
                                                 
 												<?php
 												
-												$queryUsuariosLideres = 'SELECT * FROM aportaciones where aportaciones.id_wiki = "'.$idwiki.'" ';	
+												$queryUsuariosLideres = 'SELECT * FROM aportaciones where aportaciones.id_wiki = "'.$idwiki.'" order by aportaciones.ediciones DESC';	
 				
 				
 												if( !$resultUsuariosLideres = $db->query($queryUsuariosLideres) ){
@@ -477,10 +478,10 @@
                                         <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                             <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
 
-                                                <li role="presentation" class=""><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">General Statistics</a>
+                                               <!-- <li role="presentation" class=""><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">General Statistics</a>
                                                 </li>
-                                                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Last Leader Wiki Badges</a>
-                                                </li>                                           
+                                                <!--<li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Last Leader Wiki Badges</a>
+                                                </li>   -->                                        
 												
 												<li role="presentation" class="active"><a href="#tab_content5" role="tab" id="profile-tab3" data-toggle="tab" aria-expanded="false">Leader Wiki Users</a>
                                                 </li>
@@ -894,15 +895,18 @@
 																		 echo'
 																																	
 																		<div class="col-md-3 col-sm-3 col-xs-12 animated fadeInDown">
-																			<a href="fichaUsuario.php?nombre='.$rowUsuarios->nombre_usuario.'"><div class="well profile_view">
-																				<div class="col-sm-12" style="  min-height: 140px;">
+																			<a href="fichaUsuario.php?nombre='.$rowUsuarios->nombre_usuario.'">
+																			<div class="well profile_view">
+																				<div class="col-sm-12" style="  min-height: 140px; height: 240px;">
 																					
 																					<div class="left col-xs-7">
 																						<img style="height: 50px;width: 50px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$rowUsuarios->url_avatar_usuario.'" class="avatar" alt="Avatar">
 																						<h2>'.$rowUsuarios->nombre_usuario.'</h2>
 																						
-																						<p><strong>Ediciones:</strong>'.$rowUsuarioEdiciones->ediciones.'</p>
-																						
+																						<p><strong>Editions: </strong>'.$rowUsuarioEdiciones->ediciones.'</p>
+																																												<br>
+																						<p><strong>Description: </strong>'.$rowUsuariosLideres->descripcion_logro.'.</p>
+																						</br>
 																					</div>
 																					<div class="right col-xs-5 text-center">
 																						<img src="'.$rowUsuarios->url_imagen_logro.'" alt="" class="img-circle img-responsive">
@@ -919,7 +923,7 @@
 																					<div class="col-xs-12 col-sm-6 emphasis">
 																						
 																						<a href="fichaUsuario.php?nombre='.$rowUsuarios->nombre_usuario.'" ><button  type="button" class="btn btn-primary btn-xs"> <i class="fa fa-user">
-																							</i> Go to User</button></a>
+																							</i> Go to User</button></a> 
 																					</div>
 																				</div>
 																			</div></a>
@@ -1157,7 +1161,7 @@
 							}
 						},
 						legend: {
-							data:['<?php echo''.$row->nombre_wiki.''; ?>']
+							data:['Number of Pages']
 						},
 						toolbox: {
 							show : true,
@@ -1186,7 +1190,7 @@
 						],
 						series : [
 							{
-								name:'<?php echo''.$row->nombre_wiki.''; ?>',
+								name:'Number of Pages',
 								type:'bar',
 								data:[<?php echo''.$row->paginas.''; ?>, <?php echo''.$rowmedia50paginas->resultado.''; ?>, <?php echo ''.$rowMediaPaginas->paginas.''; ?>/*, <?php echo''.$row->ficheros_subidos.''; ?>*/]
 							}
@@ -1203,7 +1207,7 @@
 							}
 						},
 						legend: {
-							data:['<?php echo''.$row->nombre_wiki.''; ?>']
+							data:['Number of Editions']
 						},
 						toolbox: {
 							show : true,
@@ -1232,7 +1236,7 @@
 						],
 						series : [
 							{
-								name:'<?php echo''.$row->nombre_wiki.''; ?>',
+								name:'Number of Editions',
 								type:'bar',
 								data:[<?php echo''.$row->ediciones_paginas.''; ?>, <?php echo''.$rowmedia50ediciones->resultado.''; ?>, <?php echo''.$rowMediaEdicionesPaginas->ediciones.''; ?>/*, <?php echo''.$row->ficheros_subidos.''; ?>*/]
 							}
@@ -1249,7 +1253,7 @@
 							}
 						},
 						legend: {
-							data:['<?php echo''.$row->nombre_wiki.''; ?>']
+							data:['Average Editions']
 						},
 						toolbox: {
 							show : true,
@@ -1278,7 +1282,7 @@
 						],
 						series : [
 							{
-								name:'<?php echo''.$row->nombre_wiki.''; ?>',
+								name:'Average Editions',
 								type:'bar',
 								data:[<?php echo''.$row->media_ediciones.''; ?>, <?php echo''.$rowmedia50media_ediciones->resultado.''; ?>, <?php echo''.$rowMediaEdicionesMediaPaginas->media.''; ?>/*, <?php echo''.$row->ficheros_subidos.''; ?>*/]
 							}

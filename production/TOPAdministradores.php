@@ -3,7 +3,8 @@
 		
 
 		
-		   include 'dbConect.php';
+		 include 'dbConect.php';
+
 		    
 		 ?>
 
@@ -17,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>ChartsUp - Top Administrators </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -31,6 +32,7 @@
     <link href="css/icheck/flat/green.css" rel="stylesheet">
 
 
+<link rel="icon" href="images/logoTFG.png">
     <script src="js/jquery.min.js"></script>
 
     <!--[if lt IE 9]>
@@ -42,7 +44,20 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+	<style>
+	h2,h3{
+	
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	
+	.DTTT_button{
+		
+		display:none;
+		
+	}
+	</style>
+		
+		
 </head>
 
 
@@ -56,7 +71,7 @@
                                  <?php
 				include'menuLateral.php';
 			?>
-            </div>
+            
 
             <!-- top navigation -->
             <div class="top_nav">
@@ -75,16 +90,15 @@
             <div class="right_col" role="main">
 
 
-
-                    <div class="row">
+                    <div class="">
 					
 					<!-- Aqui esta la primera linea -->
 					<div class="col-md-3 col-sm-12 col-xs-12">
-                                        <div>
+                                       
 								<div class="x_panel">
 
                                             <div class="x_title">
-                                                <h2>Top 5 Wikis users more users administrators</h2>
+                                                <h2>Top 5 Wikis more users administrators</h2>
 
                                                 <div class="clearfix"></div>
                                             </div>
@@ -123,37 +137,11 @@
                                             </ul>
 											
                                         </div>
-										</div>
+										
                         </div>
 						
-						   <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>The 10 Wikis with most administrations users</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-
-                                    <div id="mainb" style="height:350px;"></div>
-
-                                </div>
-                            </div>
-                        </div>
-					
-					<!-- Aquí está la segunda línea-->
-					
-					
-					
 						
-			          
-						
-						
-
-				
-						<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-9 col-sm-9 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
                                     <h2>Graphic administrators users on Wikia</h2>
@@ -180,7 +168,37 @@
 
                                 </div>
                             </div>
-                        </div>			
+                        </div>	
+						
+						
+						   <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>The 10 Wikis with most administrations users</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <div id="mainb" style="height:350px;"></div>
+
+                                </div>
+                            </div>
+                        </div>
+					
+					<!-- Aquí está la segunda línea-->
+					
+					
+					
+						
+			          
+						
+						
+
+				
+		
 							
 							
 
@@ -235,13 +253,7 @@
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             calculable: true,
-            /*legend: {
-                //orient: 'vertical',
-                //x: 'left',
-                x: 'center',
-                y: 'bottom',
-                data: ['Wiki 1', 'Otras Wikis', 'Wiki 2', 'Wiki 3', 'Wiki 4', 'Otras Wikis 1', 'Wiki 5', 'Wiki 6', 'Wiki 7', 'Wiki 8']
-            },*/
+
             toolbox: {
                 show: true,
                 feature: {
@@ -265,6 +277,34 @@
                     }
                 }
             },
+		legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:[
+		<?php
+			
+						 $query333 =  'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
+							
+						if( !$result333 = $db->query($query333) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+
+					  $num_resultsListado333 = $result333->num_rows;
+						$restarTotal =0;
+						 for( $i333 = 1; $i333 <= $num_resultsListado333; $i333++ ){
+							 $row333 = $result333->fetch_object();
+							 
+							
+								 echo "'$row333->nombre_wiki',";
+	
+						 }
+						 echo "'Other Wikis'";
+						 
+		
+		?>
+		
+		]
+    },
             series: [
                 {
                     name: 'Wiki',
@@ -273,10 +313,10 @@
                     itemStyle: {
                         normal: {
                             label: {
-                                show: true
+                                show: false
                             },
                             labelLine: {
-                                show: true
+                                show: false
                             }
                         },
                         emphasis: {
@@ -284,7 +324,7 @@
                                 show: true,
                                 position: 'center',
                                 textStyle: {
-                                    fontSize: '14',
+                                    fontSize: '20',
                                     fontWeight: 'normal'
                                 }
                             }
@@ -320,7 +360,7 @@
 						 $numeroExacto = $row4->asd - $restarTotal;
 						echo' {
 							 value: '.$numeroExacto.',
-							 name: "Otras Wikis"
+							 name: "Other Wikis"
 						 },';
 						 
 							 ?>
@@ -336,6 +376,7 @@
 		
         var myChart9 = echarts.init(document.getElementById('mainb'), theme);
         myChart9.setOption({
+			
     title: {
         x: 'center',
         //text: 'ECharts例子个数统计',
