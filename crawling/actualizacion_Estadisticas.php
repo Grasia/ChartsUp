@@ -88,8 +88,10 @@ $db = new mysqli('localhost', 'root', '');
 
 	    foreach($html->find('.mw-statistics-edits-average td.mw-statistics-numbers') as $prueba5) 
 			$aux1 = $prueba5->plaintext;
-			$ediciones_media = $aux1;
-	   
+			$caracteres = Array(","); 
+			$aux2 = str_replace($caracteres,".",$aux1);
+			$ediciones_media = $aux2;
+		
 	    foreach($html->find('.mw-statistics-users td.mw-statistics-numbers') as $prueba6) 
        $aux1 = $prueba6->plaintext;
 			$caracteres = Array(".",","); 
