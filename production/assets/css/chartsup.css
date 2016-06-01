@@ -230,7 +230,7 @@ blockquote span{
 }
 
 .navbar-custom.top-nav-collapse{
-    background: rgba(254,82,76, .9); /* Primary color, can be changed via colors.css */
+    background: rgba(0,0,0,0.8); /* Primary color, can be changed via colors.css */
 }
 
 .navbar-custom .navbar-brand {
@@ -242,7 +242,7 @@ blockquote span{
 
 .navbar-custom .navbar-brand span.brand-logo{
     display: inline-block;
-    padding: 14px 0;
+    padding: 7px 0;
     margin: 0 16px;
 }
 
@@ -986,7 +986,7 @@ ul.project-meta li a{
     color: #fff;
 }
 ul.project-meta li a:hover{
-    color: #f76758;
+    color: #A94442;
 }
 
 .full-project {
@@ -1001,7 +1001,7 @@ ul.project-meta li a:hover{
     background: black; /* Primary color, can be changed via colors.css */
 }
 .full-project:hover {
-    background: rgba(223,81,76, 1); /* Hover color, can be changed via colors.css */
+    background: #A94442; /* Hover color, can be changed via colors.css */
 }
 .full-project a {
     padding: 0px;
@@ -1867,14 +1867,14 @@ footer .social a{
     text-shadow: none;
     background: #fcfcfc;
     color: #fff;
-    background: rgba(254,82,76, .8);
+    background: rgba(1, 2, 4, 0.62);
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
     color: #fff;
-    background: rgba(254,82,76, .8);
+    background: rgba(1, 2, 4, 0.62);
 }
 
 img::selection {

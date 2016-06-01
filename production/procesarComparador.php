@@ -2774,7 +2774,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Paginas']
+        data:['Pages']
     },
     toolbox: {
         show : true,
@@ -2805,7 +2805,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Paginas',
+            name:'Pages',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -2813,7 +2813,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -2849,7 +2849,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Paginas']
+        data:['Pages']
     },
     toolbox: {
         show : true,
@@ -2879,7 +2879,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Paginas',
+            name:'Pages',
             type:'bar',
             smooth:true,
            itemStyle: {
@@ -2887,7 +2887,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -2923,7 +2923,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Paginas']
+        data:['Pages']
     },
     toolbox: {
         show : true,
@@ -2953,7 +2953,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Paginas',
+            name:'Pages',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -2961,7 +2961,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -2998,7 +2998,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Registrados']
+        data:['Register Users']
     },
     toolbox: {
         show : true,
@@ -3029,7 +3029,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Registrados',
+            name:'Register Users',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3037,7 +3037,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3073,7 +3073,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Registrados']
+        data:['Register Users']
     },
     toolbox: {
         show : true,
@@ -3103,7 +3103,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Registrados',
+            name:'Register Users',
             type:'bar',
             smooth:true,
            itemStyle: {
@@ -3111,7 +3111,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3147,7 +3147,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Registrados']
+        data:['Register Users']
     },
     toolbox: {
         show : true,
@@ -3177,7 +3177,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Registrados',
+            name:'Register Users',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3185,7 +3185,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3220,7 +3220,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ediciones']
+        data:['Editions']
     },
     toolbox: {
         show : true,
@@ -3250,7 +3250,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ediciones',
+            name:'Editions',
             type:'bar',
             smooth:true,
            itemStyle: {
@@ -3258,7 +3258,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3296,7 +3296,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ediciones']
+        data:['Editions']
     },
     toolbox: {
         show : true,
@@ -3326,7 +3326,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ediciones',
+            name:'Editions',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3334,7 +3334,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3370,7 +3370,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ediciones']
+        data:['Editions']
     },
     toolbox: {
         show : true,
@@ -3400,7 +3400,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ediciones',
+            name:'Editions',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3408,7 +3408,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3445,7 +3445,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ficheros']
+        data:['Uploaded Files']
     },
     toolbox: {
         show : true,
@@ -3475,7 +3475,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ficheros',
+            name:'Uploaded Files',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3483,7 +3483,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3521,7 +3521,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ficheros']
+        data:['Uploaded Files']
     },
     toolbox: {
         show : true,
@@ -3551,7 +3551,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ficheros',
+            name:'Uploaded Files',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3559,7 +3559,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3595,7 +3595,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Ficheros']
+        data:['Uploaded Files']
     },
     toolbox: {
         show : true,
@@ -3625,7 +3625,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Ficheros',
+            name:'Uploaded Files',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3633,7 +3633,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3671,7 +3671,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Media Ediciones']
+        data:['Average Editions']
     },
     toolbox: {
         show : true,
@@ -3701,7 +3701,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Media Ediciones',
+            name:'Average Editions',
             type:'bar',
             
 			itemStyle: {
@@ -3709,7 +3709,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3749,7 +3749,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Media Ediciones']
+        data:['Average Editions']
     },
     toolbox: {
         show : true,
@@ -3779,7 +3779,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Media Ediciones',
+            name:'Average Editions',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3787,7 +3787,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
@@ -3823,7 +3823,7 @@ We can also save the picture after all the changes we have made.</p>
         trigger: 'axis'
     },
     legend: {
-        data:['Media Ediciones']
+        data:['Average Editions']
     },
     toolbox: {
         show : true,
@@ -3853,7 +3853,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Media Ediciones',
+            name:'Average Editions',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3861,7 +3861,7 @@ We can also save the picture after all the changes we have made.</p>
 					areaStyle: {type: 'default'},
                     color: function(params) {
                         // build a color map as your need.
-                        var colorList = ['#673147','#BDC3C7','#34495E','#0088CC'];
+                        var colorList = ['#673147','#BDC3C7','#34495E','#402629'];
                         return colorList[params.dataIndex]
                     },
 					 label: {
