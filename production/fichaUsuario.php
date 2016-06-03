@@ -417,7 +417,7 @@
 																																	
 																		<div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDown" >
 																			<div class="well profile_view">
-																				<div class="col-sm-12" style="    min-height: 140px; height: 190px;">
+																				<div class="col-sm-12" style="    min-height: 300px; height: 190px;">
 																					
 																					<div class="left col-xs-7">
 																						
@@ -755,7 +755,10 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             calculable: true,
-            legend: {
+            color:['#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'],
+			legend: {
                 //orient: 'vertical',
                 //x: 'left',
                 x: 'center',
