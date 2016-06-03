@@ -3,8 +3,16 @@
 		  $nombreUsuario = $_GET['nombre'];
 
 		
-		include 'dbConect.php';
-
+		  $db = new mysqli('localhost', 'root', '');
+		  
+		  $db->query("SET CHARACTER SET UTF8");
+		  
+		  if( $db->connect_errno > 0 ){
+			die('Unable to connect to database [' . $db->connect_error . ']');
+		  }
+	   
+		
+		  $db->select_db('tfgdatabase');
 		  
 		  $query = 'SELECT *
 					FROM aportaciones where aportaciones.nombre_usuario = "'.$nombreUsuario.'"';
@@ -134,7 +142,7 @@
 										<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
 											<div style="border:0px;" class="tile-stats">
 												
-												<div class="avatar-view" style=" float:left; width: 90px;border-radius: 50%;height: auto;" title="Change the avatar">
+												<div class="avatar-view" style=" float:left; width: 90px;border-radius: 50%;height: auto;"">
 																	<img src="<?php echo''.$row->url_avatar.'' ?>" alt="Avatar">
 												 </div>
 												
@@ -181,7 +189,7 @@
 								
 									<div class="x_panel">
 													<div class="x_title">
-														<h2><i class="fa fa-bars"></i> User Statistics <small>Editions in each wiki</small></h2>
+														<h2><i class="fa fa-bars"></i> Number of editions in each wiki <small>Editions per Wiki</small></h2>
 														
 														<div class="clearfix"></div>
 													</div>
@@ -297,7 +305,7 @@
 																		   echo' <tr class="even pointer">
 																			   
 																				
-																				<td class=" last">'.$rowWiki->nombre_wiki.'</td>
+																				<td class=" last"><a href="fichaWiki.php?id='.$rowWiki->id_wiki.'">'.$rowWiki->nombre_wiki.' </td>
 																				<td ><div class="progress progress_sm">										
 																								<div class="progress-bar bg-green" role="progressbar" data-transitiongoal="'.$grafico.'"></div>
 																								
@@ -422,7 +430,7 @@
 																					<div class="left col-xs-7">
 																						
 																						<h2>'.$rowLogros->titulo_logro.'</h2>
-																						<img style="    border-radius: 50%;" src="'.$rowLogros->url_avatar_usuario.'" class="avatar" alt="Avatar">
+																						<img style="height: 60px;width: 60px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$rowLogros->url_avatar_usuario.'" class="avatar" alt="Avatar">
 																						<p><strong>Wiki: </strong><a href="fichaWiki.php?id='.$rowLogros->id_wiki.'"> '.$rowNombreWiki->nombre_wiki.' </a></p>
 																						<br>
 																						<p><strong>Description: </strong>'.$rowLogros->descripcion_logro.'.</p>
@@ -631,14 +639,15 @@
 
 				  $rowWiki = $resultWiki->fetch_object();
 			
-				if ($i != $num_resultsListado1)
+
 				echo'"'.$rowWiki->nombre_wiki.'",';
-				else{
+
+			 } //End For
+			 
 					echo'"';
-					echo''.$rowWiki->nombre_wiki.'';
-					echo'"';
-				}
-			 }
+					echo'Other Wikis';
+					echo'"';			 
+			 
 			?>
 			
 			]
@@ -660,9 +669,9 @@
                     color: function(params) {
                         // build a color map as your need.
                         var colorList = [
-                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
-                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
-                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                          '#673147','#BDC3C7','#34495E','#402629','#26C0C0', '#27727B',
+                           '#FE8463','#E5C964', '#A62029' ,'#915D8E','#F3A43B',
+                           '#D7504B','#C6E579'
                         ];
                         return colorList[params.dataIndex]
                     },
@@ -681,19 +690,34 @@
 			  }
 
 			  $num_resultsListado2 = $result2->num_rows;
-			
+			$restarTotal=0;
 			 for( $i = 1; $i <= $num_resultsListado2; $i++ ){
+				 
 				$row2 = $result2->fetch_object();
 				
-				if ($i != $num_resultsListado2)
+				$restarTotal = $restarTotal + $row2->ediciones;
 				echo'"'.$row2->ediciones.'",';
-				else{
-					echo'"';
-					echo''.$row2->ediciones.'';
-					echo'"';
-				}
+
 				
 			 }
+			 
+					//Aquí va el dato de Other wikis.
+
+			$query4 =  'SELECT SUM(ediciones) as `asd` from `aportaciones` where aportaciones.nombre_usuario = "'.$nombreUsuario.'" ';
+							
+						if( !$result4 = $db->query($query4) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+					  
+						 $row4 = $result4->fetch_object();
+						 $numeroExacto = $row4->asd - $restarTotal;
+						echo' {
+							 value: '.$numeroExacto.',
+							 name: "Other Wikis"
+						 },';
+					
+					//Funciona					
+					
 			?>
 			
 			],
@@ -748,6 +772,8 @@
     ]
 });
 
+
+
 var myChart = echarts.init(document.getElementById('echart_donut'), theme);
         myChart.setOption({
             tooltip: {
@@ -755,9 +781,9 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             calculable: true,
-            color:['#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
-                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
-                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'],
+            color:['#673147','#BDC3C7','#34495E','#402629','#26C0C0', '#27727B',
+                           '#FE8463','#E5C964', '#A62029' ,'#915D8E','#F3A43B',
+                           '#D7504B','#C6E579'],
 			legend: {
                 //orient: 'vertical',
                 //x: 'left',
@@ -893,11 +919,13 @@ var myChart = echarts.init(document.getElementById('echart_donut'), theme);
 					  
 						 $row4 = $result4->fetch_object();
 						 $numeroExacto = $row4->asd - $restarTotal;
-						echo' {
+					
+					if($numeroExacto != 0){
+					echo' {
 							 value: '.$numeroExacto.',
 							 name: "Other Wikis"
 						 },';
-			 
+				}
 			?>
    
                         

@@ -3,8 +3,9 @@
 		
 
 		
-		 include 'dbConect.php';
-
+		  $db = new mysqli('localhost', 'root', '');
+		  $db->select_db('tfgdatabase');
+		  $db->query("SET CHARACTER SET UTF8");
 		    
 		 ?>
 
@@ -93,7 +94,7 @@
                     <div class="">
 					
 					<!-- Aqui esta la primera linea -->
-					<div class="col-md-3 col-sm-12 col-xs-12">
+					<div class="col-md-5 col-sm-12 col-xs-12">
                                        
 								<div class="x_panel">
 
@@ -107,7 +108,7 @@
 
 											<?php
 													//EJEMPLO PARA TOP5 WIKIS CON + FICHEROS SUBIDOS
-													 $query2 = 'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 5';
+													 $query2 = 'SELECT * FROM wikis ORDER BY wikis.usuarios_administradores DESC LIMIT 10';
 						
 													  if( !$result2 = $db->query($query2) ){
 														die('There was an error running the query [' . $db->error . ']');
@@ -141,7 +142,7 @@
                         </div>
 						
 						
-				<div class="col-md-9 col-sm-9 col-xs-12">
+				<div class="col-md-7 col-sm-7 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
                                     <h2>Graphic administrators users on Wikia</h2>
@@ -441,9 +442,9 @@
                     color: function(params) {
                         // build a color map as your need.
                         var colorList = [
-                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
-                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
-                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                          '#673147','#BDC3C7','#34495E','#402629','#26C0C0', '#27727B',
+                           '#FE8463','#E5C964', '#A62029' ,'#915D8E','#F3A43B',
+                           '#D7504B','#C6E579'
                         ];
                         return colorList[params.dataIndex]
                     },

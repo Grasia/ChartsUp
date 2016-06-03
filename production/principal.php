@@ -433,9 +433,9 @@ include 'dbConect.php';
                                         <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                             <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
 
-                                                <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Sumaring Wiki Statistics</a>
+                                                <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Wiki Stats</a>
                                                 </li>
-                                                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Sumaring User Statistics</a>
+                                                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">User Stats</a>
                                                 </li>                                           
 												
 												
