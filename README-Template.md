@@ -1,14 +1,14 @@
 <img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo" width="200px;">
 
-<br>
-
 ![ChartsUp](http://chartsup.esy.es/images/wellcomeSnapt.png)
+
+**Introduction**
 
 The main goal of this project is to define a tool that allows the user to flexibly display the information that is stored in different ways in one of the most active collaborative communities, Wikia, and extract specific data to perform analysis on it.
 
 In this project we use components from Gentellela Bootstrap Admin Template. This template uses the default Bootstrap 3.x.x styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards. We also use PHP Simple HTML DOM Parser to capture all the data from the collaborative platform and store it into our database. Due to the fact that we need to show a large amount of chats, we decided to use Echarts JS, a powerful charting and visualization library.
 
-We have a [version accessible](http://chartsup.esy.es) to all , so you can test the Key Features
+We have a [version accessible](http://chartsup.esy.es) to all , so you can test the Key Features.
 
 ## Getting Started
 
