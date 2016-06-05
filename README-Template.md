@@ -40,25 +40,6 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
@@ -66,13 +47,52 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+* Bootstrap
+* Font Awesome
+* jQuery-Autocomplete
+* Bootstrap Colorpicker
+* Cropper
+* dataTables
+* Date Range Picker for Bootstrap
+* Dropzone
+* ECharts
+* bootstrap-wysiwyg
+* Flot - Javascript plotting library for jQuery.
+* gauge.js
+* iCheck
+* jquery.inputmask plugin
+* Ion.RangeSlider
+* jQuery
+* moment.js
+* jquery-nicescroll plugin
+* PNotify - Awesome JavaScript notifications
+* NProgress
+* Pace
+* Parsley
+* bootstrap-progressbar
+* select2
+* Sidebar Transitions - simple off-canvas navigations
+* Skycons - canvas based wather icons
+* jQuery Sparklines plugin
+* switchery - Turns HTML checkbox inputs into beautiful iOS style switches
+* jQuery Tags Input Plugin
+* Autosize - resizes text area to fit text
+* validator - HTML from validator using jQuery
+* jQuery Smart Wizard
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+To contribute, please ensure that you have stable Node.js and npm installed.
+
+Test if Gulp CLI is installed by running gulp --version. If the command isn't found, run npm install -g gulp. For more information about installing Gulp, see the Gulp's Getting Started.
+
+If gulp is installed, follow the steps below.
+
+* Fork and clone the repo.
+* Run gulp, this will will open gentelella on your default browser
+* Now you can code, code and code!
+* Submit a pull request
+
 
 ## Versioning
 
@@ -80,9 +100,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Alejandro Pequeño Pulleiro** - *Initial work* - [Github Profile](https://github.com/AlejandroPeq)
+* **Claudia Gil Navarro** - *Initial work* - [Github Profile](https://github.com/claudiagil)
+* **Alejandro Del Valle Silva** - *Initial work* - [Github Profile](https://github.com/AlexDvs)
 
 ## License
 
