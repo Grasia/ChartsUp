@@ -1,4 +1,5 @@
-<img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo" width="220px; float:right;">
+<img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo" width="220px;" style="float:right;">
+<br>
 
 <img src="http://chartsup.esy.es/images/wellcomeSnapt.png" alt="ChartsUp logo" width="margin-left:auto; margin-right:auto;">
 
