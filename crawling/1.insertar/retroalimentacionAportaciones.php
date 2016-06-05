@@ -1,6 +1,25 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+ <style>
+ h1,
+        h2,
+        h3,
+        #userName {
+        font-family: 'Montserrat Alternates', sans-serif;
+        }
+        
+        .DTTT_button {
+        display: none;
+        }
+</style>
+<meta charset="utf-8">
+
 <?php
 
+setlocale(LC_ALL,"es_ES");
 
+echo'<ul>';
+echo'<br><h1>Script Retroalimentación aportaciones</h1>';
+echo'<li><h2>Hora De Comienzo - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
 
  $db = new mysqli('localhost', 'root', '');
 	  
@@ -60,8 +79,8 @@
 			$caracteres = Array(" "); 
 			$aux2 = str_replace($caracteres,"_",$urlUsuario);
 			
-			echo ''.$aux2.'<br><br>';
-			$query = 'INSERT INTO aportaciones VALUES (null,"'.$rowLogros->nombre_usuario.'", 0 , "'.$aux2.'" , "'.$rowLogros->id_wiki.'","","")';
+			
+			$query = 'INSERT INTO aportaciones VALUES (null,"'.$rowLogros->nombre_usuario.'", 0 , "'.$aux2.'" , "'.$rowLogros->id_wiki.'","","",0,0)';
 
 			$db->query($query);
 			
@@ -70,7 +89,8 @@
 	 }
 
 	  $db->close();
-
+echo'<li><h2>Hora De Finalización - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
+echo'</ul>';
 
 
 ?>

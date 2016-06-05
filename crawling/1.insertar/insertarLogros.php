@@ -1,9 +1,30 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+ <style>
+ h1,
+        h2,
+        h3,
+        #userName {
+        font-family: 'Montserrat Alternates', sans-serif;
+        }
+        
+        .DTTT_button {
+        display: none;
+        }
+</style>
+<meta charset="utf-8">
+
 <?php
 
 ini_set('max_execution_time', 10000);
-ini_set('display_errors', false);
 
-include'simple_html_dom.php';
+
+include'../simple_html_dom.php';
+
+setlocale(LC_ALL,"es_ES");
+
+echo'<ul>';
+echo'<br><h1>Script Insertar Logros</h1>';
+echo'<li><h2>Hora De Comienzo - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
 
 
 function url_exists($url)
@@ -35,7 +56,7 @@ $db = new mysqli('localhost', 'root', '');
  
   $db->select_db('tfgdatabase');
   
-   $query = 'SELECT * FROM wikis where wikis.nombre_wiki like "H%" or  wikis.nombre_wiki like "I%" or wikis.nombre_wiki like "J%" or  wikis.nombre_wiki like "K%" or  wikis.nombre_wiki like "L%" or  wikis.nombre_wiki like "M%" or  wikis.nombre_wiki like "N%"';
+   $query = 'SELECT * FROM wikis';
                						
    if( !$result = $db->query($query) ){
 		die('There was an error running the query [' . $db->error . ']');
@@ -55,39 +76,26 @@ $db = new mysqli('localhost', 'root', '');
 		$url = (string)$row->url;
 		
 		
-		$cadenaAuxiliar = 'Especial:WikiActivity';
+		$cadenaAuxiliar = 'Especial:Leaderboard';
 		
 		
 		$cadena = Array("Especial:Estad%C3%ADsticas"); 
 	    $sustitucion = str_replace($cadena,$cadenaAuxiliar,$url);
 		
-		if (url_exists($url)){
+		if (url_exists($sustitucion)){
 		$html = file_get_html($sustitucion);
 		
 
-		foreach($html->find('cite span a') as $perfilUsuarioUrl) {
+		foreach($html->find('.user a') as $perfilUsuarioUrl) {
 			//Nombre del usuario
 			$nombreUsuario = $perfilUsuarioUrl->plaintext;
-			$url2 = $perfilUsuarioUrl->href;
-			
-			$cadena = Array("/wiki/Especial:WikiActivity"); 
-	   
-			$perfil = str_replace($cadena,$url2,$sustitucion);
-			
-			if (url_exists($perfil)){
-			
-			$html2 = file_get_html($perfil);
 			
 			
-			foreach($html2->find('.tally em') as $ediciones){ 
-				//Número de Ediciones Finales
-				$edicionesFinales = $ediciones->plaintext;
-			}
-			
+
 			$encontrado = false;
 			$contador = 0;
 			
-			$query2 = 'SELECT * FROM usuarios';
+			$query2 = 'SELECT * FROM logros';
 			if( !$result2 = $db->query($query2) ){
 				die('There was an error running the query [' . $db->error . ']');
 		   }
@@ -112,13 +120,13 @@ $db = new mysqli('localhost', 'root', '');
 
 			}
 			
+			
+			
+			
 			if (!$encontrado && $nombreUsuario!="Editor no registrado" ){
 				
-				$caracteres = Array(".",","); 
-				$aux2 = str_replace($caracteres,"",$edicionesFinales);
-				$ediciones_formateado = intval($aux2);
 				
-				$query3 = 'INSERT INTO usuarios VALUES (null,"'.$nombreUsuario.'", "'.$ediciones_formateado.'" ,"'.$row->id_wiki.'")';
+				$query3 = 'INSERT INTO logros VALUES (null,"'.$nombreUsuario.'", 0 , "" , "" ,"'.$row->id_wiki.'","","")';
 				if( !$result3 = $db->query($query3) ){
 					die('There was an error running the query [' . $db->error . ']');
 				}
@@ -126,17 +134,21 @@ $db = new mysqli('localhost', 'root', '');
 			}
 			
 			
-			}
+			
+			
+			
+			
 		}
 
-		 
+		
 		
 		
 	}
 	}
 	
-	echo $i;
+	
 	
 	$db->close();
-
+echo'<li><h2>Hora De Finalización - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
+echo'</ul>';
 ?>

@@ -1,9 +1,30 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+ <style>
+ h1,
+        h2,
+        h3,
+        #userName {
+        font-family: 'Montserrat Alternates', sans-serif;
+        }
+        
+        .DTTT_button {
+        display: none;
+        }
+</style>
+<meta charset="utf-8">
+
 <?php
 
 ini_set('max_execution_time', 10000);
 
 
-include'simple_html_dom.php';
+include'../simple_html_dom.php';
+
+setlocale(LC_ALL,"es_ES");
+
+echo'<ul>';
+echo'<br><h1>Script Actualizar Logros Avatar Badge</h1>';
+echo'<li><h2>Hora De Comienzo - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
 
 
 function url_exists($url)
@@ -76,14 +97,12 @@ $db = new mysqli('localhost', 'root', '');
 		if (url_exists($sustitucion)){
 		$html = file_get_html($sustitucion);
 			 
-			foreach($html->find('.badges .profile-hover h3') as $prueba1){
-				$aux1 = $prueba1->plaintext;
+			foreach($html->find('.badges .profile-hover img') as $prueba1){
+				$aux1 = $prueba1->src;
 				
-				$caracteres = Array('"'); 
-				$aux2 = str_replace($caracteres,"",$aux1);
 				
 
-				$array[$contador] = $aux2;
+				$array[$contador] = $aux1;
 				
 				$contador++;
 			
@@ -107,12 +126,15 @@ $db = new mysqli('localhost', 'root', '');
 	for( $n = 0; $n < $num_resultsFinal  ; $n++ ){
 	$rowFinal = $resultFinal->fetch_object();
 	
-		$query3 = 'UPDATE logros SET logros.titulo_logro = "'.$array[$n].'" where logros.id_wiki = "'.$rowFinal->id_wiki.'" AND logros.nombre_usuario = "'.$rowFinal->nombre_usuario.'"';
+		$query3 = 'UPDATE logros SET logros.url_imagen_logro = "'.$array[$n].'" where logros.id_wiki = "'.$rowFinal->id_wiki.'" AND logros.nombre_usuario = "'.$rowFinal->nombre_usuario.'"';
 			if( !$result3 = $db->query($query3) ){
 				die('There was an error running the query [' . $db->error . ']');
 		}
 	
 	}
 	$db->close();
+	
+	echo'<li><h2>Hora De Finalización - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
+echo'</ul>';
 
 ?>

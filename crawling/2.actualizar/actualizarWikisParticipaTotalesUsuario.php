@@ -1,6 +1,27 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+ <style>
+ h1,
+        h2,
+        h3,
+        #userName {
+        font-family: 'Montserrat Alternates', sans-serif;
+        }
+        
+        .DTTT_button {
+        display: none;
+        }
+</style>
+<meta charset="utf-8">
+
 <?php
 
 ini_set('max_execution_time', 3000);
+
+setlocale(LC_ALL,"es_ES");
+
+echo'<ul>';
+echo'<br><h1>Script Actualizar Total Wikis Participación</h1>';
+echo'<li><h2>Hora De Comienzo - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
 
  $db = new mysqli('localhost', 'root', '');
 		  
@@ -44,5 +65,9 @@ ini_set('max_execution_time', 3000);
 			
 			
 			}
+			
+			
+			echo'<li><h2>Hora De Finalización - '.date("H").':'. date("i").':'. date("s").'</h2></li>';
+echo'</ul>';
 			
 ?>
