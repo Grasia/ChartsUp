@@ -1,6 +1,4 @@
-# Project Title
-
-<img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo">
+<img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo" width="220px;">
 
 ## Getting Started
 
