@@ -16,13 +16,28 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-What things you need to install the software and how to install them
+To put into production, the application on a local machine , you must have the following:
 
-```
-Give examples
-```
+A local web server that allows the execution of html, css and js files.
+
+A database manager to import the structure of the database and manage stored information. 
+
+An example containing all the above is [XAMPP](https://www.apachefriends.org/es/index.html) a distribution of Apache completely free and easy to install containing MariaDB , PHP and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.  
+
 
 ### Installing
+
+Once installed xampp , we headed to the XAMPP folder within htdocs put all files in the folder called production
+
+Then arrancarmos xampp contol to start the apache server and mysql.
+
+Now we need to import the database . To do this we write in the browser localhost .
+
+```
+localhost
+```
+![ChartsUp](http://chartsup.esy.es/images/importar.png)
+
 
 A step by step series of examples that tell you have to get a development env running
 
