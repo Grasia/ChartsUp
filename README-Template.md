@@ -47,13 +47,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
+* Google Fonts
 * Bootstrap
 * Font Awesome
 * jQuery-Autocomplete
-* Bootstrap Colorpicker
-* Cropper
 * dataTables
-* Date Range Picker for Bootstrap
 * Dropzone
 * ECharts
 * bootstrap-wysiwyg
@@ -72,7 +70,6 @@ Add additional notes about how to deploy this on a live system
 * bootstrap-progressbar
 * select2
 * Sidebar Transitions - simple off-canvas navigations
-* Skycons - canvas based wather icons
 * jQuery Sparklines plugin
 * switchery - Turns HTML checkbox inputs into beautiful iOS style switches
 * jQuery Tags Input Plugin
@@ -93,24 +90,27 @@ If gulp is installed, follow the steps below.
 * Now you can code, code and code!
 * Submit a pull request
 
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Alejandro Pequeño Pulleiro** - *Initial work* - [Github Profile](https://github.com/AlejandroPeq)
-* **Claudia Gil Navarro** - *Initial work* - [Github Profile](https://github.com/claudiagil)
-* **Alejandro Del Valle Silva** - *Initial work* - [Github Profile](https://github.com/AlexDvs)
+* Alejandro Pequeño Pulleiro - [Github Profile](https://github.com/AlejandroPeq)
+* Claudia Gil Navarro - [Github Profile](https://github.com/claudiagil)
+* Alejandro Del Valle Silva - [Github Profile](https://github.com/AlexDvs)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+MIT License
+
+Copyright (c) 2016
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Gentellela Bootstrap Admin Template
+* PHP Simple HTML DOM Parser
+
 
