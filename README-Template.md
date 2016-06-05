@@ -1,7 +1,18 @@
 <img src="http://chartsup.esy.es/images/logoTFGblack.png" alt="ChartsUp logo" width="220px;" style="float:right;">
 <br>
 
-<img src="http://chartsup.esy.es/images/wellcomeSnapt.png" alt="ChartsUp logo" width="margin-left:auto; margin-right:auto;">
+![ChartsUp](http://chartsup.esy.es/images/wellcomeSnapt.png)
+
+[![GitHub tag](https://img.shields.io/github/tag/equinusocio/material-theme.svg?style=flat-square)](https://github.com/equinusocio/material-theme/releases/latest)
+[![GitHub tag](https://img.shields.io/github/release/equinusocio/material-theme.svg?style=flat-square)](https://github.com/equinusocio/material-theme/releases)
+[![Downloads](https://img.shields.io/packagecontrol/dt/Material%20Theme.svg?colorB=80d4cd&style=flat-square)](https://packagecontrol.io/packages/Material%20Theme)
+[![Join the chat at https://gitter.im/equinusocio/material-theme](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/equinusocio/material-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+This theme brings the [Material Design](http://www.google.com/design/) visual language to your Sublime Text 3. If you have problems, first search for a similiar issue and then report with [new one](https://github.com/equinusocio/material-theme/issues).
+
+Please read the [Known Issues](https://github.com/equinusocio/material-theme#known-issues) section before reporting a new one.
+
 
 ## Getting Started
 
