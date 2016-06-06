@@ -1202,7 +1202,7 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-12 col-sm-12 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-bars"></i> Total content pages <small>Total number of content pages in each wiki</small></h2>
+												<h2><i class="fa fa-bars"></i> Total content pages <small>Content pages per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1232,7 +1232,7 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-users"></i> Register Users <small>Total number of register users per wiki</small></h2>
+												<h2><i class="fa fa-users"></i> Registered Users <small>Registered users per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1262,7 +1262,7 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-bars"></i> Total editions <small>Total number of editions per wiki</small></h2>
+												<h2><i class="fa fa-bars"></i> Editions <small>Editions per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1292,7 +1292,7 @@ $db->query($queryUpadateComparaciones4);
 							<div style=" padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-bars"></i> Average Editions <small>average editions per wiki</small></h2>
+												<h2><i class="fa fa-bars"></i> Average Editions <small>Average editions per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1321,7 +1321,7 @@ $db->query($queryUpadateComparaciones4);
 							<div style="padding-right: 0px; padding-left: 0px;" class="col-md-6 col-sm-6 col-xs-12">
 								<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-bars"></i> Uploaded Files<small>total number of uploaded files per wiki</small></h2>
+												<h2><i class="fa fa-bars"></i> Uploaded Files<small>Uploaded files per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal5"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1359,7 +1359,7 @@ $db->query($queryUpadateComparaciones4);
 
 										<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-bars"></i> Users <small>Active, Administrator, Burocrat and Rollback Users</small></h2>
+												<h2><i class="fa fa-bars"></i> Users <small>Actives, Administrators, Bureaucrats & Rollbacks</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -1424,7 +1424,7 @@ $db->query($queryUpadateComparaciones4);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Content pages </h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
@@ -1885,7 +1885,7 @@ We can also save the picture after all the changes we have made.</p>
 
 										<div class="x_panel">
                                 <div class="x_title">
-                                    <h2><i class="fa fa-bars"></i> Statistics <small>Special Users, Editions and Pages</small></h2>
+                                    <h2><i class="fa fa-bars"></i> Statistics <small>Special Users, Editions & Pages</small></h2>
                                       <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
                                     <div class="clearfix"></div>
                                 </div>
@@ -1893,11 +1893,11 @@ We can also save the picture after all the changes we have made.</p>
 
                                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                         <ul id="myTab1" class="nav nav-tabs bar_tabs right" role="tablist">
-                                            <li role="presentation" class="active"><a href="#tab_content11" id="home-tabb" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="false">Statistics of Pages</a>
+                                            <li role="presentation" class="active"><a href="#tab_content11" id="home-tabb" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="false">Pages Statistics</a>
                                             </li>
-                                            <li role="presentation" class=""><a href="#tab_content22" role="tab" id="profile-tabb" data-toggle="tab" aria-controls="profile" aria-expanded="false">Statistics of Editions</a>
+                                            <li role="presentation" class=""><a href="#tab_content22" role="tab" id="profile-tabb" data-toggle="tab" aria-controls="profile" aria-expanded="false">Editions Statistics</a>
                                             </li>
-                                            <li role="presentation" class=""><a href="#tab_content33" role="tab" id="profile-tabb3" data-toggle="tab" aria-controls="profile" aria-expanded="true">Statistics of Users</a>
+                                            <li role="presentation" class=""><a href="#tab_content33" role="tab" id="profile-tabb3" data-toggle="tab" aria-controls="profile" aria-expanded="true">Users Statistics</a>
                                             </li>
                                         </ul>
                                         <div id="myTabContent2" class="tab-content">
@@ -2020,8 +2020,8 @@ We can also save the picture after all the changes we have made.</p>
 														<tr>
 															<th>#</th>
 															<th>Wiki Name</th>
-															<th>Total editions from origin</th>
-															<th>Average of editions per page</th>
+															<th>Editions from origin</th>
+															<th>Average editions per page</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -2127,11 +2127,11 @@ We can also save the picture after all the changes we have made.</p>
 														<tr>
 															<th>#</th>
 															<th>Wiki Name</th>
-															<th>Register Users</th>
+															<th>Registered Users</th>
 															<th>Active Users</th>
-															<th>Administrator Users</th>
-															<th>Burocratar Users</th>
-															<th>Rollback Users</th>															
+															<th>Administrators</th>
+															<th>Bureaucrats</th>
+															<th>Rollbacks</th>															
 														</tr>
 													</thead>
 													<tbody>
@@ -2250,7 +2250,7 @@ We can also save the picture after all the changes we have made.</p>
 										
 										<div class="x_panel">
 											<div class="x_title">
-												<h2><i class="fa fa-list-ul"></i> Leaders Board <small>in each wiki selected</small></h2>
+												<h2><i class="fa fa-list-ul"></i> Leaders Board <small>per wiki</small></h2>
 												  <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal9"><i class="fa fa-info"></i> Info</button>
 												<div class="clearfix"></div>
 											</div>
@@ -2767,13 +2767,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Metric used',
+        //text: 'Metric used',
         subtext: 'Pages / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false, 
         data:['Pages']
     },
     toolbox: {
@@ -2842,7 +2843,7 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal5'), theme);
         myChart9.setOption({
                  title : {
-         text: 'Metric used',
+        //text: 'Metric used',
         subtext: 'Pages / Wiki'
     },
     tooltip : {
@@ -2916,13 +2917,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontal6'), theme);
         myChart9.setOption({
                  title : {
-          text: 'Metric used',
+       //text: 'Metric used',
         subtext: 'Pages / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Pages']
     },
     toolbox: {
@@ -2991,14 +2993,15 @@ We can also save the picture after all the changes we have made.</p>
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal7'), theme);
         myChartRegistrados.setOption({
                  title : {
-        text: 'Metric used',
-        subtext: 'Number of Register Users / Wiki'
+        //text: 'Metric used',
+        subtext: 'Registered users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['Register Users']
+		show: false,
+        data:['Registered Users']
     },
     toolbox: {
         show : true,
@@ -3029,7 +3032,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Register Users',
+            name:'Registered Users',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3066,14 +3069,15 @@ We can also save the picture after all the changes we have made.</p>
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal8'), theme);
         myChartRegistrados.setOption({
                  title : {
-       text: 'Metric used',
-        subtext: 'Number of Register Users / Wiki'
+      //text: 'Metric used',
+        subtext: 'Registered users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['Register Users']
+		show: false,	
+        data:['Registered Users']
     },
     toolbox: {
         show : true,
@@ -3103,7 +3107,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Register Users',
+            name:'Registered Users',
             type:'bar',
             smooth:true,
            itemStyle: {
@@ -3140,14 +3144,15 @@ We can also save the picture after all the changes we have made.</p>
 		var myChartRegistrados = echarts.init(document.getElementById('echart_bar_horizontal9'), theme);
         myChartRegistrados.setOption({
                  title : {
-        text: 'Metric used',
-        subtext: 'Number of Register Users / Wiki'
+       // text: 'Metric used',
+        subtext: 'Registered users / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['Register Users']
+		show: false,
+        data:['Registered Users']
     },
     toolbox: {
         show : true,
@@ -3177,7 +3182,7 @@ We can also save the picture after all the changes we have made.</p>
     ],
     series : [
         {
-            name:'Register Users',
+            name:'Registered Users',
             type:'bar',
             smooth:true,
             itemStyle: {
@@ -3213,13 +3218,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones4'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Metric used',
-        subtext: 'Number of Total editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Editions']
     },
     toolbox: {
@@ -3289,13 +3295,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones3'), theme);
         myChart9.setOption({
                  title : {
-      text: 'Metric used',
-        subtext: 'Number of Total editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Editions']
     },
     toolbox: {
@@ -3363,13 +3370,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalEdiciones2'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Metric used',
-        subtext: 'Number of Total editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Editions']
     },
     toolbox: {
@@ -3438,13 +3446,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Metric used',
-        subtext: 'Total number of uploaded files / Wiki'
+        //text: 'Metric used',
+        subtext: 'Uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Uploaded Files']
     },
     toolbox: {
@@ -3514,13 +3523,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros3'), theme);
         myChart9.setOption({
                  title : {
-         text: 'Metric used',
-        subtext: 'Total number of uploaded files / Wiki'
+        //text: 'Metric used',
+        subtext: 'Uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Uploaded Files']
     },
     toolbox: {
@@ -3588,13 +3598,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalFicheros2'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Metric used',
-        subtext: 'Total number of uploaded files / Wiki'
+        //text: 'Metric used',
+        subtext: 'Uploaded files / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Uploaded Files']
     },
     toolbox: {
@@ -3664,13 +3675,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones4'), theme);
         myChart9.setOption({
                  title : {
-        text: 'Metric used',
-        subtext: 'Average of editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Average editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Average Editions']
     },
     toolbox: {
@@ -3742,13 +3754,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones3'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Metric used',
-        subtext: 'Average of editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Average editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Average Editions']
     },
     toolbox: {
@@ -3816,13 +3829,14 @@ We can also save the picture after all the changes we have made.</p>
 		var myChart9 = echarts.init(document.getElementById('echart_bar_horizontalMediaEdiciones2'), theme);
         myChart9.setOption({
                  title : {
-       text: 'Metric used',
-        subtext: 'Average of editions / Wiki'
+        //text: 'Metric used',
+        subtext: 'Average editions / Wiki'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
+		show: false,
         data:['Average Editions']
     },
     toolbox: {
