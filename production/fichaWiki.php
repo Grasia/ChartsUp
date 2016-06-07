@@ -3,23 +3,34 @@
 		$idwiki = $_GET['id'];
 
 		
-		include 'dbConect.php';
-
+		  $db = new mysqli('localhost', 'root', '');
+		  
+		  $db->query("SET CHARACTER SET UTF8");
+		  
+		  if( $db->connect_errno > 0 ){
+			die('Unable to connect to database [' . $db->connect_error . ']');
+		  }
+	   
+		
+		  $db->select_db('tfgdatabase');
 		  
 		  $query = 'SELECT * FROM wikis where wikis.id_wiki = "'.$idwiki.'"';
 					
 					
 		  //$query2 = 'SELECT * FROM wikis ORDER BY wikis.paginas_contenido DESC LIMIT 1';
 		  
-		  $query2 = 'Select AVG(prueba) as "resultado" from (Select wikis.paginas as "prueba" From Wikis order by wikis.paginas DESC Limit 50) q';
+		  $query2 = 'Select avg(prueba) as "resultado" from (Select wikis.paginas as "prueba" From wikis order by wikis.paginas DESC Limit 50) q';
 		  
 		 
 		  
-		  $query3 = 'Select AVG(prueba) as "resultado" from (Select wikis.ediciones_paginas as "prueba" From Wikis order by wikis.paginas DESC Limit 50) q';
+		  $query3 = 'Select avg(prueba) as "resultado" from (Select wikis.ediciones_paginas as "prueba" From wikis order by wikis.paginas DESC Limit 50) q';
 		  
 		  
-		  $queryMediaDeMedia = 'Select AVG(prueba) as "resultado" from (Select wikis.media_ediciones as "prueba" From Wikis order by wikis.paginas DESC Limit 50) q';
+		  $queryMediaDeMedia = 'Select avg(prueba) as "resultado" from (Select wikis.media_ediciones as "prueba" From wikis order by wikis.paginas DESC Limit 50) q';
 
+		  $queryMediaDeArchivos = 'Select avg(prueba) as "resultado" from (Select wikis.ficheros_subidos as "prueba" From wikis order by wikis.paginas DESC Limit 50) q';
+		  
+		  
 		  
 		   $queryUsuarios = 'SELECT *
 					FROM aportaciones where aportaciones.id_wiki = "'.$idwiki.'"';
@@ -39,6 +50,10 @@
 		  		   if( !$resultqueryMediaDeMedia = $db->query($queryMediaDeMedia) ){
 			die('There was an error running the query [' . $db->error . ']');
 		  }
+		  	 if( !$resultqueryMediaDeArchivos = $db->query($queryMediaDeArchivos) ){
+			die('There was an error running the query [' . $db->error . ']');
+		  }
+		  
 		  
 		   if( !$resultUsuarios = $db->query($queryUsuarios) ){
 			die('There was an error running the query [' . $db->error . ']');
@@ -60,7 +75,7 @@
 		   $rowmedia50paginas = $result2->fetch_object();
 		   $rowmedia50ediciones = $result3->fetch_object();
 		   $rowmedia50media_ediciones = $resultqueryMediaDeMedia->fetch_object();
-
+		   $rowmedia50media_archivos = $resultqueryMediaDeArchivos->fetch_object();
 			//Medias Datos Wikis
 			
 			
@@ -201,7 +216,7 @@
 <body class="nav-md">
 
     <div class="container body">
-
+			   		
 
         <div class="main_container">
 
@@ -235,16 +250,16 @@
 								<div class="x_panel">
                                 <div class="x_title">
 									<div class="x_title">
-                                  
+                                  <h1> </h1>
 									
 									
 													<?php
-									
+														echo'<h1><bold>'.$row->nombre_wiki.'</bold>   ';
 														if($row->url_imagen_wiki == ""){
-															echo'<img style="width:8%"  src="images/LargeWikiaLogo.png" alt="Wiki Avatar">';
+															echo'<img style="width:18%"  src="images/LargeWikiaLogo.png" alt="Wiki Avatar"></h1>';
 														}
 														else
-															echo'<img style="width:8%"  src="'.$row->url_imagen_wiki.'" alt="Wiki Avatar">';
+															echo'<img style="width:18%"  src="'.$row->url_imagen_wiki.'" alt="Wiki Avatar"></h1>';
 													?>
 												 
 									
@@ -338,16 +353,17 @@
                                     
                                 </div>
 								</div>
-																<div style="    padding-right: 0px;" class="col-md-3 col-sm-3 col-xs-12 profile_left">
+									<div style="    padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
 							 
 							 
 									<div class="x_panel">
                                             <div class="x_title">
-                                                <h2><i class="fa fa-users"></i> Users <small>last common users order by editions</small></h2>
+                                                <h2><i class="fa fa-users"></i> List Users <small> editions order by editions</small></h2>
+												<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
                                                 
                                                 <div class="clearfix"></div>
                                             </div>
-                                            <ul class="list-unstyled top_profiles scroll-view" style="overflow: hidden; outline: none;height:370px; cursor: -webkit-grab;" tabindex="5001">
+                                            <ul class="list-unstyled top_profiles scroll-view" style="overflow: hidden; outline: none;height:350px; cursor: -webkit-grab;" tabindex="5001">
                                                 
 												<?php
 												
@@ -387,14 +403,32 @@
                                         </div>
 							 
 								</div>
-								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-3 col-sm-3 col-xs-12 profile_left">
+								
+								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
+										
+										<div class="x_panel">
+											<div class="x_title">
+												<h2><i class="fa fa-bars"></i> Participations in porcent in the last month</h2>
+												<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal7"><i class="fa fa-info"></i> Info</button>
+												<div class="clearfix"></div>
+											</div>
+											<div class="x_content">
+
+												<div id="echart_donut5" style="height:350px;"></div>
+
+											</div>
+										</div>
+						</div>
+								
+								
+								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
 							 
 							 
 
 											<div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-bars"></i> Page Statistics <!--<small>Editions, Pages and Files</small>--></h2>
-                                    
+                                    <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
                                     <div class="clearfix"></div>
                                 </div>
 								<br />
@@ -410,14 +444,14 @@
 							 
 								</div>
 								
-								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-3 col-sm-3 col-xs-12 profile_left">
+								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
 							 
 							 
 
 											<div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-bars"></i> Editions Statistics <!--<small>Editions, Pages and Files</small>--></h2>
-                                    
+						<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal9"><i class="fa fa-info"></i> Info</button>                                    
                                     <div class="clearfix"></div>
                                 </div>
 								<br />
@@ -433,20 +467,40 @@
 							 
 								</div>
 								
-								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-3 col-sm-3 col-xs-12 profile_left">
+								<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
 							 
 							 
 
 											<div class="x_panel">
                                 <div class="x_title">
                                     <h2><i class="fa fa-bars"></i> Average Editions Statistics <!--<small>Editions, Pages and Files</small>--></h2>
-                                    
+                                <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModa20"><i class="fa fa-info"></i> Info</button>    
                                     <div class="clearfix"></div>
                                 </div>
 								<br />
                                 <div class="x_content">
 
                                     <div id="echart_Barras3" style="height:350px;"></div>
+
+									</div>
+								
+								</div>
+							</div>
+							
+															<div style=" padding-left: 0px;   padding-right: 0px;" class="col-md-6 col-sm-6 col-xs-12 profile_left">
+							 
+							 
+
+											<div class="x_panel">
+                                <div class="x_title">
+                                    <h2><i class="fa fa-bars"></i> Number of Files <small>Editions, Pages and Files</small></h2>
+                                    <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
+                                    <div class="clearfix"></div>
+                                </div>
+								<br />
+                                <div class="x_content">
+
+                                    <div id="echart_Barras_Files" style="height:350px;"></div>
 
                                 </div>
 								
@@ -466,13 +520,13 @@
 							
 							</div>
 						
-						
+
 						<div class="col-md-12 col-sm-12 col-xs-12" >
 										
 						
 						
 										<div class="x_panel">
-										
+										<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModa21"><i class="fa fa-info"></i> Info</button>
                                         <!-- end of user-activity-graph -->
 
                                         <div class="" role="tabpanel" data-example-id="togglable-tabs">
@@ -894,13 +948,13 @@
 																		  
 																		 echo'
 																																	
-																		<div class="col-md-3 col-sm-3 col-xs-12 animated fadeInDown">
+																		<div class="col-md-4 col-sm-4 col-xs-12 animated fadeInDown">
 																			<a href="fichaUsuario.php?nombre='.$rowUsuarios->nombre_usuario.'">
 																			<div class="well profile_view">
-																				<div class="col-sm-12" style="  min-height: 140px; height: 240px;">
+																				<div class="col-sm-12" style="  min-height: 320px; height: 240px;">
 																					
 																					<div class="left col-xs-7">
-																						<img style="height: 50px;width: 50px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$rowUsuarios->url_avatar_usuario.'" class="avatar" alt="Avatar">
+																						<img style="height: 60px;width: 60px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$rowUsuarios->url_avatar_usuario.'" class="avatar" alt="Avatar">
 																						<h2>'.$rowUsuarios->nombre_usuario.'</h2>
 																						
 																						<p><strong>Editions: </strong>'.$rowUsuarioEdiciones->ediciones.'</p>
@@ -954,6 +1008,246 @@
                             </div>
                         </div>
                     </div>
+					
+					                            <div id="myModal6" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							                            <div id="myModal7" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							                            <div id="myModal8" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							                            <div id="myModal9" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							                            <div id="myModa20" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							                            <div id="myModa21" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                        </div>
+                                        <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
+                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="padding:25px;">
+                                                <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    <br><br>
+                                                </p>
+                                                <p style=" text-align:justify;">
+                                                    
+                                                    This like the rest , have a toolbar with different functions .
+                                                    <br><br>
+                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
+                                                    <br><br>
+                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
+                                                    <br><br>
+                                                    <img style="width:100%;" src="images/1graficPopup.png">
+                                                    <br><br>
+                                                    Of course we can reset the graph as initially envision .
+                                                    <br><br>
+                                                We can also save the picture after all the changes we have made.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 					
 					
 					
@@ -1289,6 +1583,232 @@
 			
 						]
 					});
+					
+					
+			   		
+	   
+	   
+	   
+	var myChart15 = echarts.init(document.getElementById('echart_donut5'), theme); //Este es el nuevo a poner
+		
+        myChart15.setOption({
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            calculable: true,
+            color:['#673147','#BDC3C7','#34495E','#402629','#26C0C0', '#27727B',
+                           '#FE8463','#E5C964', '#A62029' ,'#915D8E','#F3A43B',
+                           '#D7504B','#C6E579'],
+            toolbox: {
+                show: true,
+                feature: {
+                 /*   magicType: {
+                        show: true,
+                        type: ['pie'],
+                        option: {
+                           /* funnel: {
+                                x: '25%',
+                                width: '50%',
+                                funnelAlign: 'center',
+                                max: 1548
+                            }
+                        }
+                    },*/
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+		legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:[
+		<?php
+			
+						 $query333 =  'SELECT * FROM aportaciones where id_wiki= '.$idwiki.' ORDER BY aportaciones.ediciones DESC LIMIT 10';
+							
+						if( !$result333 = $db->query($query333) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+
+					  $num_resultsListado333 = $result333->num_rows;
+						$restarTotal =0;
+						 for( $i333 = 1; $i333 <= $num_resultsListado333; $i333++ ){
+							 $row333 = $result333->fetch_object();
+							 
+							
+								 echo "'$row333->nombre_usuario',";
+	
+						 }
+						 echo "'Other Users'";
+						 
+		
+		?>
+		
+		]
+    },
+            series: [
+                {
+                    name: 'Wiki',
+                    type: 'pie',
+                    radius: [90, 130],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '20',
+                                    fontWeight: 'normal'
+                                }
+                            }
+                        }
+                    },
+                    data: [
+		<?php
+			
+						 $query3 =  'SELECT * FROM aportaciones where id_wiki= '.$idwiki.' ORDER BY aportaciones.ediciones DESC LIMIT 10';
+							
+						if( !$result3 = $db->query($query3) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+
+					  $num_resultsListado3 = $result3->num_rows;
+						$restarTotal =0;
+						 for( $i3 = 1; $i3 <= $num_resultsListado3; $i3++ ){
+						 
+						 $row3 = $result3->fetch_object();
+							$restarTotal = $restarTotal + $row3->ediciones;
+							 echo '{
+								 value: '.$row3->ediciones.',
+								 name: "'.$row3->nombre_usuario.'"
+							 },';
+						 }
+						$query4 =  'SELECT SUM(ediciones) as `asd` from `aportaciones` where id_wiki= '.$idwiki.'';
+							
+						if( !$result4 = $db->query($query4) ){
+						die('There was an error running the query [' . $db->error . ']');
+					  }
+					  
+						 $row4 = $result4->fetch_object();
+						 $numeroExacto = $row4->asd - $restarTotal;
+						echo' {
+							 value: '.$numeroExacto.',
+							 name: "Other Users"
+						 },';
+						 
+							 ?>
+
+                ]
+            }
+        ]
+        });
+		
+							var myChart10 = echarts.init(document.getElementById('echart_Barras_Files'), theme);
+							myChart10.setOption({
+						tooltip : {
+							trigger: 'axis',
+							axisPointer : {            
+								type : 'shadow'        
+							}
+						},
+						legend: {
+							data:['Number of Files']
+						},
+						toolbox: {
+							show : true,
+							orient: 'vertical',
+							x: 'right',
+							y: 'center',
+							feature : {
+								//mark : {show: true},
+								//dataView : {show: true, readOnly: false},
+								//magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+								restore : {show: true},
+								saveAsImage : {show: true}
+							}
+						},
+						calculable : true,
+						xAxis : [
+							{
+								type : 'category',
+								data : ['This Wiki','50 Top Wikis','All Wikis'/*,'ficheros'*/]
+							}
+						],
+						yAxis : [
+							{
+								type : 'value'
+							}
+						],
+						series : [
+							{
+								name:'Number of Files',
+								type:'bar',
+								data:[<?php echo''.$row->ficheros_subidos.''; ?>, <?php echo''.$rowmedia50media_archivos->resultado.''; ?>, <?php echo ''.$rowMediaFicherosSubidos->ficheros.''; ?>/*, <?php echo''.$row->ficheros_subidos.''; ?>*/]
+							}
+			
+						]
+					});
+                    
+					var myChart10 = echarts.init(document.getElementById('echart_Barras2'), theme);
+							myChart10.setOption({
+						tooltip : {
+							trigger: 'axis',
+							axisPointer : {            
+								type : 'shadow'        
+							}
+						},
+						legend: {
+							data:['Number of Editions']
+						},
+						toolbox: {
+							show : true,
+							orient: 'vertical',
+							x: 'right',
+							y: 'center',
+							feature : {
+								//mark : {show: true},
+								//dataView : {show: true, readOnly: false},
+								//magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+								restore : {show: true},
+								saveAsImage : {show: true}
+							}
+						},
+						calculable : true,
+						xAxis : [
+							{
+								type : 'category',
+								data : ['This Wiki','50 Top Wikis','All Wikis'/*,'ficheros'*/]
+							}
+						],
+						yAxis : [
+							{
+								type : 'value'
+							}
+						],
+						series : [
+							{
+								name:'Number of Editions',
+								type:'bar',
+								data:[<?php echo''.$row->ediciones_paginas.''; ?>, <?php echo''.$rowmedia50ediciones->resultado.''; ?>, <?php echo''.$rowMediaEdicionesPaginas->ediciones.''; ?>/*, <?php echo''.$row->ficheros_subidos.''; ?>*/]
+							}
+			
+						]
+					});
+		
+	
         </script>
 		
 		<script>
@@ -1342,7 +1862,11 @@
        
     ]
 });
-                    
+       
+   
+
+</script>
+	   
 
 		</script>
    
