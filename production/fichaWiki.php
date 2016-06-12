@@ -1,5 +1,7 @@
 <?php
-
+/*
+It contains the view of a Wiki. From your ID we obtain the information from the database.
+*/
 		$idwiki = $_GET['id'];
 
 		

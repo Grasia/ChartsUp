@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- It displays the set of ideas that will be in the future.-->
 <?php
 
 include 'dbConect.php';

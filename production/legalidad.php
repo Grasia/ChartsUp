@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-
+<!-- 
+It contains legal and private information about using the product. -->
 <?php
 
 include 'dbConect.php';

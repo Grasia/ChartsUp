@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- 
+The gallery shows in alphabetical order the set of all Wikis. Grouped by their first letter.
+You need to make a call for each letter.
+-->
+
 <html>
 
 <head>

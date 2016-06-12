@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<!--
 
+FAQ contains the application.
+The questions and answers are obtained through a call to the database. 
+-->
 <?php
 
  include 'dbConect.php';

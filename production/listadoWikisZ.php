@@ -1,5 +1,8 @@
 <?php
-
+/*
+This file displays a list of wikis that begin with the character "Z".
+It also shows some basic statistics such as number of conditions and files.
+*/
 		ini_set('max_execution_time', 2000);
 		
 		include 'dbConect.php';

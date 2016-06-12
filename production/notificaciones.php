@@ -1,5 +1,8 @@
 <?php
+/*
 
+Displays the set of notifications from the web, grouping them according to the occasion.
+*/
 		ini_set('max_execution_time', 2000);
 		
 		include 'dbConect.php';

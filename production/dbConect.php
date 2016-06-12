@@ -1,5 +1,5 @@
 <?php 
-
+//Call to a database.
 		$db = new mysqli('localhost', 'root', '');
 		  
 		  $db->query("SET CHARACTER SET UTF8");

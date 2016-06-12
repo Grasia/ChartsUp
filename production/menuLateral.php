@@ -1,6 +1,11 @@
 <link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+<!--
 
+This file includes the left sidebar, which contains links to go to other sites.
+
+It is used on all pages.
+-->
 
 <div class="col-md-3 left_col" style=" position: fixed;">
     <div class="left_col scroll-view">

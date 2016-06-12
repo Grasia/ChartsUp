@@ -1,3 +1,8 @@
+<!--
+This file contains statistics on the Web application notifications and future ideas.
+-->
+
+
 <!DOCTYPE html>
 <?php
 
@@ -35,7 +40,8 @@ ini_set('max_execution_time', 3000);
 
         <script src="js/jquery.min.js"></script>
 
-        <style>
+		<!-- Style utilized for text font -->
+        <style> 
             h1,
             h2,
             h3,
@@ -65,7 +71,7 @@ ini_set('max_execution_time', 3000);
 
     <body class="nav-md">
 
-
+	<!--Loader config -->
         <style>
             #loader-wrapper {
                 position: fixed;
@@ -259,7 +265,7 @@ ini_set('max_execution_time', 3000);
 
         <script>
             $(window).load(function () {
-                // Una vez se cargue al completo la página desaparecerá el div "cargando"
+                // Once it loads the full page disappears div "loading"
                 $('#loader-wrapper').hide();
             });
         </script>

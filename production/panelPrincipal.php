@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-
+//This is the main panel, which shows global statistics and links the application.
 include 'dbConect.php';
 		  
 		  $query = 'SELECT * FROM wikis';

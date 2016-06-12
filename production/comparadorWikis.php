@@ -1,5 +1,7 @@
 <?php
-
+/*This file has the configuration comparator. The user can choose up to four Wikis for comparison.
+In addition 4 wikis that have been most used to compare, as information appears.
+*/
 	  include 'dbConect.php';
 	  
 	  $query = 'SELECT nombre_wiki, id_wiki
@@ -87,7 +89,7 @@
                 <div class="">
 
                     <div class="row">
-
+						<!-- Background image -->
                         <div class="col-md-12 col-sm-12 col-xs-12">
 						
 							
@@ -119,7 +121,7 @@
                     </div>
                 </div>
 				
-				
+				<!--Wikis comparators, to get their names need to make a call to the database. -->
 				<div class="x_panel">
                                 <div class="x_title">
                                     <h2>Wiki Comparator <small>choose until four selections</small></h2>
@@ -250,7 +252,7 @@
 							
 							
 							
-							<!-- Smart Wizard -->
+							<!-- 4 wiki more compared. Too is necesary do a call to database -->
                                     
                                     <div class="x_panel">
                                        <div class="x_title">

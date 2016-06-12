@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+This file is used in the menu "About us" contains links to the statistics application repository Github link, contact the team and future ideas.
+-->
+
 <html>
 
 <head>
@@ -24,6 +28,7 @@
 
     <script src="js/jquery.min.js"></script>
 
+	<!-- Text font style -->
     <style>
         h1,
         h2,
@@ -99,7 +104,7 @@
                                 <div class="x_panel">
                                     <div class="row">
 
-
+										<!-- Aplication Statistics -->
                                         <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInDown">
 
                                             <div class="well profile_view" style="text-align:center;">
@@ -122,6 +127,7 @@
                                                 </div>
                                             </div>
                                         </div>
+										<!-- Github Repository -->
                                         <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInDown">
 
                                             <div class="well profile_view" style="text-align:center;">
@@ -144,6 +150,7 @@
                                                 </div>
                                             </div>
                                         </div>
+										<!-- Contact Support Team -->
                                         <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInDown">
 
                                             <div class="well profile_view" style="text-align:center;">
@@ -166,6 +173,7 @@
                                                 </div>
                                             </div>
                                         </div>
+										<!-- Future Ideas -->										
                                         <div class="col-md-6 col-sm-6 col-xs-12 animated fadeInDown">
 
                                             <div class="well profile_view" style="text-align:center;">

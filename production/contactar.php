@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<!--
+Form for the user to send a message to the support team of the application.
+It contains personal information, email, query type and message.
+
+You must read and accept the privacy policy.
+
+--><!DOCTYPE html>
 
 <?php
 

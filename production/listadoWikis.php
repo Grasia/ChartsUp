@@ -1,4 +1,9 @@
 <?php
+/*
+This file lists the set of all wikis that exist in Spanish. Having to make a large set of formulas, has a longer response.
+
+It has a search engine where the user can filter by name.
+*/
 
 		ini_set('max_execution_time', 2000);
 		

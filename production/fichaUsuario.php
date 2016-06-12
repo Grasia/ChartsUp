@@ -1,5 +1,7 @@
 <?php
-			
+			/*
+			Contiene la vista de un usuario. A partir de su nombre (único) realizamos una llamada a la basde de datos para mostrar su información.
+			*/
 		  $nombreUsuario = $_GET['nombre'];
 
 		
