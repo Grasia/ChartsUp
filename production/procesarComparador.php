@@ -1424,38 +1424,30 @@ $db->query($queryUpadateComparaciones4);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Content pages </h4>
+												
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Information about the panel </h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages: Content pages per wiki</h1>
+                                                
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
-                                                    <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/1graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+                                                   <p style=" text-align:justify;     margin-top: 15%;">
+													This graph shows the number of pages per compared wiki.
+													<br>
+													</p>
+<p style=" text-align:justify;">
+The X axis displays the wikis (maximum 4) and the Y axis the total number of pages.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>) ,respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.
+</p>
 
                                                 </div>
                                             </div>
@@ -1476,38 +1468,30 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Registered Users: Registered users per wiki</h1>
+                                                
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+													This graph shows the number of registered users per compared wiki.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/2graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">                                                
+The X axis displays the wikis (maximum 4), and the Y axis the number of registered users.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.
+</p>
                                                 </div>
                                             </div>
 
@@ -1527,38 +1511,30 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Editions: Editions per wiki</h1>
+                                                
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/3graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+                                                    This graph shows the number of editions per compared wiki
+													<br>
+													</p>
+                                                    
+<p style=" text-align:justify;">                                                     
+The X axis displays the wikis (maximum 4) and the Y axis the number of editions.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.
+</p>
                                                 </div>
                                             </div>
 
@@ -1578,38 +1554,29 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Average editions: Average editions per wiki</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This graph shows the average editions per compared wiki.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/4graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">                                                      
+The X axis displays the wikis (maximum 4) and the Y axis the average editions.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.
+</p>
                                                 </div>
                                             </div>
 
@@ -1629,38 +1596,29 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Uploaded files: Uploaded files per wiki</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This graph shows the number of uploaded files per compared wiki.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/5graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">                                                      
+The X axis displays the wikis (maximum 4) and the Y axis the number of uploaded files.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.
+</p>
                                                 </div>
                                             </div>
 
@@ -1680,38 +1638,31 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Users: Actives, Administrators, Bureaucrats & Rollbacks</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+													This graph shows the number of users of each type per compared wiki.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/6graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">   
+The X axis displays the user type (active, administrators, bureaucrats & rollbacks) and the Y axis the number for each type.<br>
+Each wiki has a different color.<br>
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+─ <b>Stack</b> stacks the users' type values, showing only one bar for each type of user. <b>Separate</b> shows a different bar for each wiki.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.                                                    
+</p>
                                                 </div>
                                             </div>
 
@@ -1731,38 +1682,28 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Users activity: in the last 30 days</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                    <p style=" text-align:justify;     margin-top: 15%;">
+													This graph shows the user activity per compared wiki.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/8graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">                                                       
+The tooltip bar contains:<br>
+─ The first three icons are used to add a mark (<b>Mark</b>), delete the last mark (<b>Mark Undo</b>) and remove all the marks (<b>Clear</b>), respectively.<br>
+─ <b>Data View</b> allows you to change the values.<br>
+─ <b>Pie</b> shows the ring type chart, and <b>funnel</b> changes the view to a funnet type chart.<br>
+─ <b>Refresh</b> returns to the initial state.<br>
+─ <b>Save image</b> saves the graph in PNG format.   
+</p>
                                                 </div>
                                             </div>
 
@@ -1782,38 +1723,25 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Statistics: Special Users, Editions & Pages</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                    <p style=" text-align:justify;     margin-top: 15%;">
+                                                    This table divides its content into 3 tabs:
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/7graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">
+─ <b>User Statistics</b>: displays the number of registered users, the number of administrators, bureaucrats and rollbacks for each wiki.<br>
+─ <b>Editions Statistics</b>: displays the number of editions since the very begining and the total editions for each wiki.<br> 
+─ <b>Pages Statistics</b>: displays the number of pages, content pages and uploaded files for each wiki.
+</p>
                                                 </div>
                                             </div>
 
@@ -1833,38 +1761,28 @@ We can also save the picture after all the changes we have made.</p>
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
-                                            </div>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Leaders Board</h1>
+                                                </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+													This table divides its content in tabs, as many as wikis being compared.
+													<br>
+													</p>
 
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-
-
-<br><br>
-												</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                       
-This like the rest , have a toolbar with different functions .
-<br><br>
-We can draw straight freely through the panel or modify data manually to see their behavior.
-<br><br>
-In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-<br><br>
-<img style="width:100%;" src="images/9graficPopup.png">
-<br><br>
-Of course we can reset the graph as initially envision .
-<br><br>
-We can also save the picture after all the changes we have made.</p>
+<p style=" text-align:justify;">
+Each tab displays the leaderboard information (per wiki):<br>
+─ <b>Users' avatar</b><br>
+─ <b>Users' nickname</b><br>
+─ <b>Points</b> the users have on the wiki<br>
+─ The last <b>badge</b> achieved<br>
+─ The last <b>badge's avatar</b><br>
+</p>
                                                 </div>
                                             </div>
 
