@@ -482,31 +482,23 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Participations per year</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
+                                                    This graph shows the number of wikis edited by this user.
+                                                    <br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+												The X axis displays the year (since the moment the user started editing) and the Y axis the number of wikis.<br>
+                                                The tooltip bar contains:<br>
+                                                ─ <b>Refresh</b> returns to the initial state.<br>
+                                                ─ <b>Save image</b> saves the graph in PNG format.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -521,31 +513,23 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Editions per Wiki</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
+                                                    The graph shows the number of editions for each one of the wikis in which the user participates.
                                                     <br><br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                The X axis displays the wikis and the Y axis the total number of editions.<br>
+												The tooltip bar contains:<br>
+												─ <b>Refresh</b> returns to the initial state.<br>
+												─ <b>Save image</b> saves the graph in PNG format.
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -560,31 +544,21 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">User's information</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
+													This table divides its contents into 2 tabs: 
+													<br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                ─ <b>User Participation</b>: displays the number of editions, the date of the first edition and the access to the wiki profile, per wiki.<br>
+												─ <b>Last Badge</b>: displays the user's last badge, per wiki.<br> 
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -599,31 +573,22 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Wikis' Participation</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
+                                                    This graph shows the user's participation (percentage) per wiki.
+                                                    <br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                    The tooltip bar contains:<br>
+													─ <b>Refresh</b> returns to the initial state.<br>
+													─ <b>Save image</b> saves the graph in PNG format.
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
