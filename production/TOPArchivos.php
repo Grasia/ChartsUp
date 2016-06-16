@@ -95,7 +95,7 @@
 								<div class="x_panel">
 
                                             <div class="x_title">
-                                                <h2>Top 10 Wikis users more files</h2>
+                                                <h2>Top 10 Wikis with more files</h2>
 												<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
 
 	
@@ -121,8 +121,8 @@
                                                     <a href="fichaWiki.php?id='.$row2->id_wiki.'"><img style="height: 50px;width: 50px;margin: 5px 10px 5px 0;border-radius: 50%;" src="'.$row2->url_imagen_wiki.'" class="avatar" alt="Avatar"></a>
                                                     <div class="media-body">
                                                         <a class="title" href="fichaWiki.php?id='.$row2->id_wiki.'">'.$row2->nombre_wiki.' </a>  
-                                                        <p><strong>'.$row2->ficheros_subidos.'</strong> ficheros subidos</p>
-                                                        <p> <small>Contiene '.$row2->usuarios_registrados.' usuarios registrados</small>
+                                                        <p><strong>'.$row2->ficheros_subidos.'</strong> uploaded files</p>
+                                                        <p> <small>'.$row2->usuarios_registrados.' registered users</small>
                                                         </p>
                                                     </div>
 													</li>';
@@ -154,7 +154,7 @@
 						<div class="col-md-7 col-sm-9 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Wikis with files on Wikia<small>% files</small></h2>
+                                    <h2>Wikis with more files on Wikia</h2>
 									<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal7"><i class="fa fa-info"></i> Info</button>
 
                                     <!--<ul class="nav navbar-right panel_toolbox">
@@ -186,7 +186,7 @@
 						<div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>The 10 Wikis with most files<small>number of files</small></h2>
+                                    <h2>Top 10 Wikis with more files</h2>
 									<button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
 
                                     <ul class="nav navbar-right panel_toolbox">
@@ -210,31 +210,20 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Top 10 Wikis with more uploaded files</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                This list shows the 10 wikis with more uploaded files.<br>
+												The list is sorted from highest to lowest number of files.<br>
+												Each component of the list shows the number of uploaded files and the total number of registered users
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -250,31 +239,21 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Percentage of wikis with more uploaded files</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                 This graph shows the percentage of wikis (proportion) with more uploaded files.<br>
+													The tooltip bar contains:<br>
+													─ <b>Refresh</b> returns to the initial state.<br>
+													─ <b>Save image</b> saves the graph in PNG format.   
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -290,31 +269,23 @@
                                         <div class="modal-header">
                                             <button type="button" class="close"><span aria-hidden="true">×</span>
                                             </button>
-                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i> Total content pages </h4>
+                                            <h4 class="modal-title" id="myModalLabel"><i class="fa fa-bars"></i>Information about the panel</h4>
                                         </div>
                                         <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Total content pages</h1>
-                                            <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">More information about the panel</h3>
+                                            <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Top 10 Wikis with more uploaded files</h1>
                                         </div>
                                         <div class="modal-body">
                                             <div style="padding:25px;">
                                                 <p style=" text-align:justify;     margin-top: 15%;">
-                                                    This panel reflects the total number of pages with content that has each of the wikis you selected.
-                                                    <br><br>
                                                 </p>
                                                 <p style=" text-align:justify;">
-                                                    
-                                                    This like the rest , have a toolbar with different functions .
-                                                    <br><br>
-                                                    We can draw straight freely through the panel or modify data manually to see their behavior.
-                                                    <br><br>
-                                                    In turn we can have different views of the graph. Initially, they are displayed as a bar , but we can move to a continuous line display .
-                                                    <br><br>
-                                                    <img style="width:100%;" src="images/1graficPopup.png">
-                                                    <br><br>
-                                                    Of course we can reset the graph as initially envision .
-                                                    <br><br>
-                                                We can also save the picture after all the changes we have made.</p>
+                                                This panel shows the 10 wikis with more uploaded files.<br> 
+													In this case it is a bar graph where each wiki has a different color.<br> 
+													The X axis shows the wikis, and the Y axis shows the number of files.<br>
+													The tooltip bar contains:<br>
+													─ <b>Refresh</b> returns to the initial state.<br>
+													─ <b>Save image</b> saves the graph in PNG format.    
+												</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
