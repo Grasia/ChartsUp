@@ -303,7 +303,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Global Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Global Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal1"><i class="fa fa-info"></i> Info</button>
 
                                             <div class="clearfix"></div>
@@ -322,7 +322,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-4 col-sm-4 col-xs-12" style="padding-left:0px; padding-right:0px;">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Percentage of such notifications <small></small></h2>
+                                            <h2><i class="fa fa-bars"></i> Proportion of global notifications <small></small></h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal2"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -337,7 +337,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Special tools Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Special tools Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal3"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -352,7 +352,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Database Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Database Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal4"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -367,7 +367,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Development Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Development Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal5"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -382,7 +382,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Charts Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Charts Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal6"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -397,7 +397,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-bars"></i> Colaborative Notifications <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-bars"></i> Colaborative Notifications</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal7"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -412,7 +412,7 @@ ini_set('max_execution_time', 3000);
                                 <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left:0px; ">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2><i class="fa fa-calendar"></i> Future Ideas <small>yearly statistics</small></h2>
+                                            <h2><i class="fa fa-calendar"></i> Future Ideas</h2>
                                             <button style="float:right;" type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal8"><i class="fa fa-info"></i> Info</button>
                                             <div class="clearfix"></div>
                                         </div>
@@ -434,27 +434,27 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Global notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+														<br><br>
+                                                        This panel shows the information about the evolution of global notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.   
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+                                                    </p>
                                                 </div>
                                             </div>
 
@@ -474,27 +474,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Proportion of global notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
+													<br><br>
+                                                        This panel shows the information about the proportion (percentage) of global notifications.<br>
+														The chart contains 5 types of notifications: Tools, Development, Colaborative, Panels and BBDD <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Pie</b> turns the panel into a graphic ring chart and <b>funnel</b> changes to the funnel graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.   
 
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+													</p>
                                                 </div>
                                             </div>
 
@@ -514,27 +513,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Special Tools notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+													<br><br>
+                                                        This panel shows the information about the evolution of the special tools notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.
+													</p>
                                                 </div>
                                             </div>
 
@@ -554,27 +552,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Database notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+														<br><br>
+                                                        This panel shows the information about the evolution of database notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.	
+													</p>
                                                 </div>
                                             </div>
 
@@ -594,27 +591,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Development Notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+														<br><br>
+														This panel shows the information about the evolution of development notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.
+													</p>
                                                 </div>
                                             </div>
 
@@ -634,27 +630,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Charts notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+													<br><br>
+														This panel shows the information about the evolution of charts notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.
+													</p>
                                                 </div>
                                             </div>
 
@@ -674,28 +669,27 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Colaborative notifications</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
-                                                </div>
+													<br><br>
+														This panel shows the information about the evolution of colaborative notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.
+													</p>
+											</div>
                                             </div>
 
                                             <div class="modal-footer">
@@ -714,27 +708,26 @@ ini_set('max_execution_time', 3000);
                                             <div class="modal-header">
                                                 <button type="button" class="close"><span aria-hidden="true">×</span>
                                                 </button>
-                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i> Contact ChartsUp team</h4>
+                                                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-send"></i>Information about the panel</h4>
                                             </div>
 
                                             <div class="x_content" style="background-image:url(images/ChartPanelPopup1.jpg); height:140px;">
-                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Contact ChartsUp team</h1>
-                                                <h3 style="font-size:14px; color:white; position:relative;   left: 5%; top: 35%;">Would you like to contact with the chartsUp development project team?</h3>
+                                                <h1 style="color:white; position:relative;   left: 4%; top: 30%;">Future ideas</h1>
                                             </div>
 
                                             <div class="modal-body">
                                                 <div style="padding:25px;">
                                                     <p style=" text-align:justify;     margin-top: 15%;">
-
-                                                        If you prefer , you have at your disposal a contact form with our development team .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        Just fill in the fields requested in the form, it is important that you give much information as possible to expedite the process .</p>
-
-                                                    <p style=" text-align:justify;">
-
-                                                        We'll try to respond as soon as possible , please note that this is a final year project and is not an official project with strict official support</p>
+													<br><br>
+														This panel shows the information about the evolution of our team's future ideas notifications.<br>
+														The X axis shows the months and the Y axis shows the number of notifications.<br> 
+														The chart also displays the maxim and minim, as well as the average number of notifications. <br>
+														The tooltip bar contains:<br>
+														─ <b>Data View</b> allows you to change the values.<br>
+														─ <b>Line chart</b> turns the panel into a graphic line chart and <b>bar chart</b> changes back to the bar graph.<br>
+														─ <b>Refresh</b> returns to the initial state.<br>
+														─ <b>Save image</b> saves the graph in PNG format.
+													</p>
                                                 </div>
                                             </div>
 
@@ -1019,7 +1012,7 @@ ini_set('max_execution_time', 3000);
                 $(document).ready(function () {
                     var oTable = $('#example').dataTable({
                         "oLanguage": {
-                            "sSearch": "Search all columns: "
+                            "sSearch": "Search: "
                         },
                         "aoColumnDefs": [
                             {
@@ -1070,7 +1063,7 @@ ini_set('max_execution_time', 3000);
                 $(document).ready(function () {
                     var oTable = $('#example2').dataTable({
                         "oLanguage": {
-                            "sSearch": "Search all columns: "
+                            "sSearch": "Search: "
                         },
                         "aoColumnDefs": [
                             {
@@ -1240,14 +1233,15 @@ ini_set('max_execution_time', 3000);
                 var myChart9 = echarts.init(document.getElementById('mainb'), theme);
                 myChart9.setOption({
                     title: {
-                        text: 'Years Historical ',
-                        subtext: 'Beginning user edits'
+                        text: 'Monthly evolution',
+                        //subtext: 'Beginning user edits'
                     },
                     //theme : theme,
                     tooltip: {
                         trigger: 'axis'
                     },
                     legend: {
+						show: false,
                         data: ['Global Notifications']
                     },
                     toolbox: {
@@ -1585,14 +1579,15 @@ ini_set('max_execution_time', 3000);
                         var myChart9 = echarts.init(document.getElementById('mainb2'), theme);
                         myChart9.setOption({
                             title: {
-                                text: 'Years Historical ',
-                                subtext: 'Beginning user edits'
+                                text: 'Monthly evolution',
+                                //subtext: 'Beginning user edits'
                             },
                             //theme : theme,
                             tooltip: {
                                 trigger: 'axis'
                             },
                             legend: {
+								show: false,
                                 data: ['Global Notifications']
                             },
                             toolbox: {
@@ -1785,14 +1780,15 @@ ini_set('max_execution_time', 3000);
                             var myChart9 = echarts.init(document.getElementById('mainb3'), theme);
                             myChart9.setOption({
                                 title: {
-                                    text: 'Years Historical ',
-                                    subtext: 'Beginning user edits'
+                                    text: 'Monthly evolution',
+                                    //subtext: 'Beginning user edits'
                                 },
                                 //theme : theme,
                                 tooltip: {
                                     trigger: 'axis'
                                 },
                                 legend: {
+									show: false,	
                                     data: ['Global Notifications']
                                 },
                                 toolbox: {
@@ -1979,14 +1975,15 @@ ini_set('max_execution_time', 3000);
                                 var myChart9 = echarts.init(document.getElementById('mainb4'), theme);
                                 myChart9.setOption({
                                     title: {
-                                        text: 'Years Historical ',
-                                        subtext: 'Beginning user edits'
+                                        text: 'Monthly evolution',
+                                        //subtext: 'Beginning user edits'
                                     },
                                     //theme : theme,
                                     tooltip: {
                                         trigger: 'axis'
                                     },
                                     legend: {
+										show: false,
                                         data: ['Global Notifications']
                                     },
                                     toolbox: {
@@ -2171,14 +2168,15 @@ ini_set('max_execution_time', 3000);
                                     var myChart9 = echarts.init(document.getElementById('mainb5'), theme);
                                     myChart9.setOption({
                                         title: {
-                                            text: 'Years Historical ',
-                                            subtext: 'Beginning user edits'
+                                            text: 'Monthly evolution',
+                                            //subtext: 'Beginning user edits'
                                         },
                                         //theme : theme,
                                         tooltip: {
                                             trigger: 'axis'
                                         },
                                         legend: {
+											show: false,
                                             data: ['Global Notifications']
                                         },
                                         toolbox: {
@@ -2364,14 +2362,15 @@ ini_set('max_execution_time', 3000);
                                         var myChart9 = echarts.init(document.getElementById('mainb6'), theme);
                                         myChart9.setOption({
                                             title: {
-                                                text: 'Years Historical ',
-                                                subtext: 'Beginning user edits'
+                                                text: 'Monthly evolution',
+                                                //subtext: 'Beginning user edits'
                                             },
                                             //theme : theme,
                                             tooltip: {
                                                 trigger: 'axis'
                                             },
                                             legend: {
+												show: false,
                                                 data: ['Global Notifications']
                                             },
                                             toolbox: {
@@ -2556,14 +2555,15 @@ ini_set('max_execution_time', 3000);
                                             var myChart9 = echarts.init(document.getElementById('mainb7'), theme);
                                             myChart9.setOption({
                                                 title: {
-                                                    text: 'Years Historical ',
-                                                    subtext: 'Beginning user edits'
+                                                    text: 'Monthly evolution',
+                                                    //subtext: 'Beginning user edits'
                                                 },
                                                 //theme : theme,
                                                 tooltip: {
                                                     trigger: 'axis'
                                                 },
                                                 legend: {
+													show: false,
                                                     data: ['Global Notifications']
                                                 },
                                                 toolbox: {
