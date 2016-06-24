@@ -146,11 +146,11 @@ It also shows some basic statistics such as number of conditions and files.
                                                     <input type="checkbox" class="tableflat">
                                                 </th>
                                                 <th>ID Wiki </th>
-                                                 <th>Nombre wiki </th>
-												 <th>Páginas Contenido </th>
-												 <th>Ficheros Subidos </th>
-												 <th>Ediciones Medias en Wiki </th>
-                                                <th class=" no-link last"><span class="nobr">Usuarios Registrados</span>
+                                                 <th>Name wiki </th>
+												 <th>Pages Content </th>
+												 <th>Number of Files </th>
+												 <th>Average Editions </th>
+                                                <th class=" no-link last"><span class="nobr">Number of Users</span>
                                                 </th>
                                             </tr>
 
